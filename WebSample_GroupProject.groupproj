@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{192B88F5-297B-401C-9097-269CC8534D29}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="dpr\TemplateD2Bridge\WebSample_Web.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dpr\TemplateW32\WebSample_VCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="WebSample_Web">
+        <MSBuild Projects="dpr\TemplateD2Bridge\WebSample_Web.dproj"/>
+    </Target>
+    <Target Name="WebSample_Web:Clean">
+        <MSBuild Projects="dpr\TemplateD2Bridge\WebSample_Web.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WebSample_Web:Make">
+        <MSBuild Projects="dpr\TemplateD2Bridge\WebSample_Web.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WebSample_VCL">
+        <MSBuild Projects="dpr\TemplateW32\WebSample_VCL.dproj"/>
+    </Target>
+    <Target Name="WebSample_VCL:Clean">
+        <MSBuild Projects="dpr\TemplateW32\WebSample_VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WebSample_VCL:Make">
+        <MSBuild Projects="dpr\TemplateW32\WebSample_VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="WebSample_Web;WebSample_VCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="WebSample_Web:Clean;WebSample_VCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="WebSample_Web:Make;WebSample_VCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
