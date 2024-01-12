@@ -13,10 +13,37 @@ Assim, ela irá pegar o form que está ativo no momento
 procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey;
   var Handled: Boolean);
 begin
-  if (Msg.CharCode = Ord('E')) and (HiWord(Msg.KeyData) and KF_ALTDOWN <> 0)
-  then begin
+  if (Msg.CharCode = Ord('E')) and (HiWord(Msg.KeyData) and KF_ALTDOWN <> 0) then
+  begin
     ExportForm2Web;
     Handled := TRUE;
   end;
+end;
+```
+No form que tem os componentes a serem exportamos temos a procedure *ExportD2Bridge*, que deve ter a seguinte estrutura:
+(veja as linhas com comentarios)
+*{Variaveis D2Bridge}* - aqui serão adicionadas as variáveis necessários
+*{Yours Controls}* - aqui serão adicionados os comandos de exportação dos componentes
+
+```pascal
+procedure TfSampleForm.ExportD2Bridge;
+var
+  x: Integer;
+  {Variaveis D2Bridge}
+begin
+  inherited;
+
+  Title := 'Sample Form';
+
+  TemplateClassForm := TD2BridgeFormTemplate;
+  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile := 'template.html';
+  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'itemtemplate.html';
+
+  with D2Bridge.Items.add do
+  begin
+    Row.Items.add.VCLObj(lblTitulo, CSSClass.Text.Size.fs3 + ' ' + CSSClass.Text.Style.bold);
+    {Yours Controls}
+  end;
+
 end;
 ```
