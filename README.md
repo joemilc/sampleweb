@@ -54,4 +54,9 @@ Volte ao Delphi e confira o código gerado<br>
 
 <br>
 Se este código te ajudou, que tal uma contribuiçãozinha?<br>
-<img src="https://github.com/joemilc/sampleweb/blob/main/pix_websample.jpg">
+<img src="https://github.com/joemilc/sampleweb/blob/main/pix-websample.jpg"><br>
+Chave PIX: joemil.cassio@gmail.com
+Nome: Joemil Cássio
+Valor: R$ 100,00
+Código da transferência: ExportVLC2D2Bridge
+Código QrCode (Copia e Cola): 00020126450014BR.GOV.BCB.PIX0123joemil.cassio@gmail.com5204000053039865406100.005802BR5913Joemil Cassio6008Sinop-MT62220518ExportVLC2D2Bridge6304B0EF
