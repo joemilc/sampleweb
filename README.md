@@ -51,8 +51,7 @@ Execute sua aplicação em VCL, vá até o form desejado e tecle Alt+E<br>
 Clique no button *Alterar na Unit*, selecione a unit desejada e clique abrir.<br>
 Volte ao Delphi e confira o código gerado<br>
 <br>
-<br>
-Se este código te ajudou, que tal uma contribuiçãozinha?<br>
+Se este código te ajudou, que tal uma contribuiçãozinha?<br><br>
 <img src="https://github.com/joemilc/sampleweb/blob/main/pix-websample.jpg"><br>
 Chave PIX: joemil.cassio@gmail.com<br>
 Nome: Joemil Cássio<br>
