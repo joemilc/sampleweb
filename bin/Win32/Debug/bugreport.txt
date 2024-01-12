@@ -1,455 +1,404 @@
-date/time          : 2024-01-11, 19:44:33, 625ms
+date/time          : 2024-01-11, 20:10:53, 147ms
 computer name      : DESKTOP-QD2Q122
 user name          : Joemil
 registered owner   : Joemil
 operating system   : Windows 11 x64 build 22621
 system language    : Portuguese
-system up time     : 2 days 12 hours
-program up time    : 35 seconds
+system up time     : 5 minutes 10 seconds
+program up time    : 1 minute 55 seconds
 processors         : 12x AMD Ryzen 5 4600G with Radeon Graphics
-physical memory    : 9743/15765 MB (free/total)
-free disk space    : (C:) 48,56 GB (D:) 98,20 GB
+physical memory    : 10755/15765 MB (free/total)
+free disk space    : (C:) 48,63 GB (D:) 98,21 GB
 display mode       : 2048x1152, 32 bit
-process id         : $a18
-allocated memory   : 78,91 MB
-largest free block : 1,32 GB
+process id         : $8b8
+allocated memory   : 78,30 MB
+largest free block : 1,34 GB
 executable         : WebSample_Web.exe
-exec. date/time    : 2024-01-11 19:43
+exec. date/time    : 2024-01-11 20:08
 version            : 1.0.0.0
 compiled with      : Delphi 11
 madExcept version  : 5.1.3
 callstack crc      : $02536949, $158d5465, $158d5465
+count              : 2
 exception number   : 1
 exception class    : EOSError
-exception message  : System Error. Code: 5. Acesso negado.
+exception message  : System Error. Code: 1400. O identificador da janela é inválido.
 
-main thread ($550):
-00400523 +07 WebSample_Web.exe System.SysUtils       RaiseLastOSError
-00574f4d +49 WebSample_Web.exe Vcl.Controls          TWinControl.DestroyWindowHandle
-00639907 +4b WebSample_Web.exe Vcl.Forms             TCustomForm.DestroyWindowHandle
-00635a10 +5c WebSample_Web.exe Vcl.Forms             TCustomForm.Destroy
-003a94ec +08 WebSample_Web.exe System          60 +0 TObject.Free
-004df38e +86 WebSample_Web.exe System.Classes        TComponent.DestroyComponents
-0063395d +35 WebSample_Web.exe Vcl.Forms             DoneApplication
-003f4e01 +21 WebSample_Web.exe System.SysUtils       DoExitProc
-003ab0ee +6e WebSample_Web.exe System          60 +0 @Halt0
-009cfa32 +4e WebSample_Web.exe WebSample_Web   29 +5 initialization
-768e7ba7 +17 KERNEL32.DLL                            BaseThreadInitThunk
+main thread ($13dc):
+00b20523 +07 WebSample_Web.exe System.SysUtils       RaiseLastOSError
+00c94f4d +49 WebSample_Web.exe Vcl.Controls          TWinControl.DestroyWindowHandle
+00d59907 +4b WebSample_Web.exe Vcl.Forms             TCustomForm.DestroyWindowHandle
+00d55a10 +5c WebSample_Web.exe Vcl.Forms             TCustomForm.Destroy
+00ac94ec +08 WebSample_Web.exe System          60 +0 TObject.Free
+00bff38e +86 WebSample_Web.exe System.Classes        TComponent.DestroyComponents
+00d5395d +35 WebSample_Web.exe Vcl.Forms             DoneApplication
+00b14e01 +21 WebSample_Web.exe System.SysUtils       DoExitProc
+00acb0ee +6e WebSample_Web.exe System          60 +0 @Halt0
+010efa32 +4e WebSample_Web.exe WebSample_Web   29 +5 initialization
+75e97ba7 +17 KERNEL32.DLL                            BaseThreadInitThunk
 
-thread $2e64:
-768e7ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
+thread $bac (TIdListenerThread): <priority:2>
+773aa50c +0bc WS2_32.dll                                      select
+00fc695a +04a WebSample_Web.exe IdStackWindows                TIdSocketListWindows.FDSelect
+00fc6900 +020 WebSample_Web.exe IdStackWindows                TIdSocketListWindows.SelectRead
+00fce1ee +006 WebSample_Web.exe IdSocketHandle                TIdSocketHandle.Select
+00fe4d9c +048 WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
+00fe4e03 +0af WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
+00fe6c0c +058 WebSample_Web.exe IdCustomTCPServer             TIdListenerThread.Run
+00fe3ce9 +0f5 WebSample_Web.exe IdThread                      TIdThread.Execute
+00fe3da0 +1ac WebSample_Web.exe IdThread                      TIdThread.Execute
+00fe3de0 +1ec WebSample_Web.exe IdThread                      TIdThread.Execute
+00fe3e0c +218 WebSample_Web.exe IdThread                      TIdThread.Execute
+00b7433f +02b WebSample_Web.exe madExcept                     HookedTThreadExecute
+00b743aa +096 WebSample_Web.exe madExcept                     HookedTThreadExecute
+00bfd7ad +049 WebSample_Web.exe System.Classes                ThreadProc
+00bfd810 +0ac WebSample_Web.exe System.Classes                ThreadProc
+00acb200 +028 WebSample_Web.exe System                  60 +0 ThreadWrapper
+00b74225 +00d WebSample_Web.exe madExcept                     CallThreadProcSafe
+00b7428a +032 WebSample_Web.exe madExcept                     ThreadExceptFrame
+00b74300 +0a8 WebSample_Web.exe madExcept                     ThreadExceptFrame
+75e97ba7 +017 KERNEL32.DLL                                    BaseThreadInitThunk
+>> created by main thread ($13dc) at:
+00bfd874 +018 WebSample_Web.exe System.Classes                TThread.Create
 
-thread $3548:
-768e7ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
+thread $27e8 (TIdListenerThread): <priority:2>
+773aa50c +0bc WS2_32.dll                                      select
+00fc695a +04a WebSample_Web.exe IdStackWindows                TIdSocketListWindows.FDSelect
+00fc6900 +020 WebSample_Web.exe IdStackWindows                TIdSocketListWindows.SelectRead
+00fce1ee +006 WebSample_Web.exe IdSocketHandle                TIdSocketHandle.Select
+00fe4d9c +048 WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
+00fe4e03 +0af WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
+00fe6c0c +058 WebSample_Web.exe IdCustomTCPServer             TIdListenerThread.Run
+00fe3ce9 +0f5 WebSample_Web.exe IdThread                      TIdThread.Execute
+00fe3da0 +1ac WebSample_Web.exe IdThread                      TIdThread.Execute
+00fe3de0 +1ec WebSample_Web.exe IdThread                      TIdThread.Execute
+00fe3e0c +218 WebSample_Web.exe IdThread                      TIdThread.Execute
+00b7433f +02b WebSample_Web.exe madExcept                     HookedTThreadExecute
+00b743aa +096 WebSample_Web.exe madExcept                     HookedTThreadExecute
+00bfd7ad +049 WebSample_Web.exe System.Classes                ThreadProc
+00bfd810 +0ac WebSample_Web.exe System.Classes                ThreadProc
+00acb200 +028 WebSample_Web.exe System                  60 +0 ThreadWrapper
+00b74225 +00d WebSample_Web.exe madExcept                     CallThreadProcSafe
+00b7428a +032 WebSample_Web.exe madExcept                     ThreadExceptFrame
+00b74300 +0a8 WebSample_Web.exe madExcept                     ThreadExceptFrame
+75e97ba7 +017 KERNEL32.DLL                                    BaseThreadInitThunk
+>> created by main thread ($13dc) at:
+00bfd874 +018 WebSample_Web.exe System.Classes                TThread.Create
 
-thread $19c4:
-768e7ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
+thread $a7c (TIdThreadWithTask): <suspended>
+00bfd874 +18 WebSample_Web.exe System.Classes TThread.Create
 
-thread $184c (TIdListenerThread): <priority:2>
-767ca50c +0bc WS2_32.dll                                      select
-008a695a +04a WebSample_Web.exe IdStackWindows                TIdSocketListWindows.FDSelect
-008a6900 +020 WebSample_Web.exe IdStackWindows                TIdSocketListWindows.SelectRead
-008ae1ee +006 WebSample_Web.exe IdSocketHandle                TIdSocketHandle.Select
-008c4d9c +048 WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
-008c4e03 +0af WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
-008c6c0c +058 WebSample_Web.exe IdCustomTCPServer             TIdListenerThread.Run
-008c3ce9 +0f5 WebSample_Web.exe IdThread                      TIdThread.Execute
-008c3da0 +1ac WebSample_Web.exe IdThread                      TIdThread.Execute
-008c3de0 +1ec WebSample_Web.exe IdThread                      TIdThread.Execute
-008c3e0c +218 WebSample_Web.exe IdThread                      TIdThread.Execute
-0045433f +02b WebSample_Web.exe madExcept                     HookedTThreadExecute
-004543aa +096 WebSample_Web.exe madExcept                     HookedTThreadExecute
-004dd7ad +049 WebSample_Web.exe System.Classes                ThreadProc
-004dd810 +0ac WebSample_Web.exe System.Classes                ThreadProc
-003ab200 +028 WebSample_Web.exe System                  60 +0 ThreadWrapper
-00454225 +00d WebSample_Web.exe madExcept                     CallThreadProcSafe
-0045428a +032 WebSample_Web.exe madExcept                     ThreadExceptFrame
-00454300 +0a8 WebSample_Web.exe madExcept                     ThreadExceptFrame
-768e7ba7 +017 KERNEL32.DLL                                    BaseThreadInitThunk
->> created by main thread ($550) at:
-004dd874 +018 WebSample_Web.exe System.Classes                TThread.Create
+thread $15b4 (TIdThreadWithTask): <suspended>
+00bfd874 +18 WebSample_Web.exe System.Classes TThread.Create
 
-thread $3790 (TIdListenerThread): <priority:2>
-767ca50c +0bc WS2_32.dll                                      select
-008a695a +04a WebSample_Web.exe IdStackWindows                TIdSocketListWindows.FDSelect
-008a6900 +020 WebSample_Web.exe IdStackWindows                TIdSocketListWindows.SelectRead
-008ae1ee +006 WebSample_Web.exe IdSocketHandle                TIdSocketHandle.Select
-008c4d9c +048 WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
-008c4e03 +0af WebSample_Web.exe IdServerIOHandlerSocket       TIdServerIOHandlerSocket.Accept
-008c6c0c +058 WebSample_Web.exe IdCustomTCPServer             TIdListenerThread.Run
-008c3ce9 +0f5 WebSample_Web.exe IdThread                      TIdThread.Execute
-008c3da0 +1ac WebSample_Web.exe IdThread                      TIdThread.Execute
-008c3de0 +1ec WebSample_Web.exe IdThread                      TIdThread.Execute
-008c3e0c +218 WebSample_Web.exe IdThread                      TIdThread.Execute
-0045433f +02b WebSample_Web.exe madExcept                     HookedTThreadExecute
-004543aa +096 WebSample_Web.exe madExcept                     HookedTThreadExecute
-004dd7ad +049 WebSample_Web.exe System.Classes                ThreadProc
-004dd810 +0ac WebSample_Web.exe System.Classes                ThreadProc
-003ab200 +028 WebSample_Web.exe System                  60 +0 ThreadWrapper
-00454225 +00d WebSample_Web.exe madExcept                     CallThreadProcSafe
-0045428a +032 WebSample_Web.exe madExcept                     ThreadExceptFrame
-00454300 +0a8 WebSample_Web.exe madExcept                     ThreadExceptFrame
-768e7ba7 +017 KERNEL32.DLL                                    BaseThreadInitThunk
->> created by main thread ($550) at:
-004dd874 +018 WebSample_Web.exe System.Classes                TThread.Create
+thread $2848 (TThreadPool.TQueueWorkerThread):
+75841c12 +082 KERNELBASE.dll                           WaitForSingleObjectEx
+75841b7d +00d KERNELBASE.dll                           WaitForSingleObject
+00b1e9f6 +002 WebSample_Web.exe System.SysUtils        WaitForSyncWaitObj
+00b1ebe7 +01f WebSample_Web.exe System.SysUtils        WaitOrSignalObj
+00aca439 +065 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00aca476 +0a2 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00aca4ae +022 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00eb34eb +263 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00eb353d +2b5 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00eb3b0d +885 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00b7433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
+00b743aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
+00bfd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
+00bfd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
+00acb200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
+00b74225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
+00b7428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
+00b74300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
+75e97ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
+>> created by thread $6b8 at:
+00bfd874 +018 WebSample_Web.exe System.Classes         TThread.Create
 
-thread $1788 (TIdThreadWithTask): <suspended>
-004dd874 +18 WebSample_Web.exe System.Classes TThread.Create
+thread $2850 (TThreadPool.TQueueWorkerThread):
+75841c12 +082 KERNELBASE.dll                           WaitForSingleObjectEx
+75841b7d +00d KERNELBASE.dll                           WaitForSingleObject
+00b1e9f6 +002 WebSample_Web.exe System.SysUtils        WaitForSyncWaitObj
+00b1ebe7 +01f WebSample_Web.exe System.SysUtils        WaitOrSignalObj
+00aca439 +065 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00aca476 +0a2 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00aca4ae +022 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00eb34eb +263 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00eb353d +2b5 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00eb3b0d +885 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00b7433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
+00b743aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
+00bfd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
+00bfd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
+00acb200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
+00b74225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
+00b7428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
+00b74300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
+75e97ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
+>> created by thread $6b8 at:
+00bfd874 +018 WebSample_Web.exe System.Classes         TThread.Create
 
-thread $408 (TThreadPool.TQueueWorkerThread):
-77011c12 +082 KERNELBASE.dll                           WaitForSingleObjectEx
-77011b7d +00d KERNELBASE.dll                           WaitForSingleObject
-003fe9f6 +002 WebSample_Web.exe System.SysUtils        WaitForSyncWaitObj
-003febe7 +01f WebSample_Web.exe System.SysUtils        WaitOrSignalObj
-003aa439 +065 WebSample_Web.exe System           60 +0 TMonitor.Wait
-003aa476 +0a2 WebSample_Web.exe System           60 +0 TMonitor.Wait
-003aa4ae +022 WebSample_Web.exe System           60 +0 TMonitor.Wait
-007934eb +263 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-0079353d +2b5 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-00793b0d +885 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-0045433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
-004543aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
-004dd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
-004dd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
-003ab200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
-00454225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
-0045428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
-00454300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
-768e7ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
->> created by thread $28f4 at:
-004dd874 +018 WebSample_Web.exe System.Classes         TThread.Create
+thread $1570 (TThreadPool.TQueueWorkerThread):
+75841c12 +082 KERNELBASE.dll                           WaitForSingleObjectEx
+75841b7d +00d KERNELBASE.dll                           WaitForSingleObject
+00b1e9f6 +002 WebSample_Web.exe System.SysUtils        WaitForSyncWaitObj
+00b1ebe7 +01f WebSample_Web.exe System.SysUtils        WaitOrSignalObj
+00aca439 +065 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00aca476 +0a2 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00aca4ae +022 WebSample_Web.exe System           60 +0 TMonitor.Wait
+00eb34eb +263 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00eb353d +2b5 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00eb3b0d +885 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
+00b7433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
+00b743aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
+00bfd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
+00bfd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
+00acb200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
+00b74225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
+00b7428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
+00b74300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
+75e97ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
+>> created by thread $6b8 at:
+00bfd874 +018 WebSample_Web.exe System.Classes         TThread.Create
 
-thread $17f0 (TThreadPool.TQueueWorkerThread):
-77011c12 +082 KERNELBASE.dll                           WaitForSingleObjectEx
-77011b7d +00d KERNELBASE.dll                           WaitForSingleObject
-003fe9f6 +002 WebSample_Web.exe System.SysUtils        WaitForSyncWaitObj
-003febe7 +01f WebSample_Web.exe System.SysUtils        WaitOrSignalObj
-003aa439 +065 WebSample_Web.exe System           60 +0 TMonitor.Wait
-003aa476 +0a2 WebSample_Web.exe System           60 +0 TMonitor.Wait
-003aa4ae +022 WebSample_Web.exe System           60 +0 TMonitor.Wait
-007934eb +263 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-0079353d +2b5 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-00793b0d +885 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-0045433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
-004543aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
-004dd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
-004dd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
-003ab200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
-00454225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
-0045428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
-00454300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
-768e7ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
->> created by thread $28f4 at:
-004dd874 +018 WebSample_Web.exe System.Classes         TThread.Create
+thread $bb4:
+75e97ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
 
-thread $9dc (TThreadPool.TQueueWorkerThread):
-77011c12 +082 KERNELBASE.dll                           WaitForSingleObjectEx
-77011b7d +00d KERNELBASE.dll                           WaitForSingleObject
-003fe9f6 +002 WebSample_Web.exe System.SysUtils        WaitForSyncWaitObj
-003febe7 +01f WebSample_Web.exe System.SysUtils        WaitOrSignalObj
-003aa439 +065 WebSample_Web.exe System           60 +0 TMonitor.Wait
-003aa476 +0a2 WebSample_Web.exe System           60 +0 TMonitor.Wait
-003aa4ae +022 WebSample_Web.exe System           60 +0 TMonitor.Wait
-007934eb +263 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-0079353d +2b5 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-00793b0d +885 WebSample_Web.exe System.Threading       TThreadPool.TQueueWorkerThread.Execute
-0045433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
-004543aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
-004dd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
-004dd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
-003ab200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
-00454225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
-0045428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
-00454300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
-768e7ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
->> created by thread $28f4 at:
-004dd874 +018 WebSample_Web.exe System.Classes         TThread.Create
+thread $242c:
+75e97ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
 
-thread $2e10 (TThreadPool.TThreadPoolMonitor):
-774906c4 +0e4 ntdll.dll                                RtlDelayExecution
-76fed189 +049 KERNELBASE.dll                           SleepEx
-76fed12a +00a KERNELBASE.dll                           Sleep
-004de701 +001 WebSample_Web.exe System.Classes         TThread.Sleep
-00793f19 +12d WebSample_Web.exe System.Threading       TThreadPool.TThreadPoolMonitor.Execute
-007940cc +2e0 WebSample_Web.exe System.Threading       TThreadPool.TThreadPoolMonitor.Execute
-0045433f +02b WebSample_Web.exe madExcept              HookedTThreadExecute
-004543aa +096 WebSample_Web.exe madExcept              HookedTThreadExecute
-004dd7ad +049 WebSample_Web.exe System.Classes         ThreadProc
-004dd810 +0ac WebSample_Web.exe System.Classes         ThreadProc
-003ab200 +028 WebSample_Web.exe System           60 +0 ThreadWrapper
-00454225 +00d WebSample_Web.exe madExcept              CallThreadProcSafe
-0045428a +032 WebSample_Web.exe madExcept              ThreadExceptFrame
-00454300 +0a8 WebSample_Web.exe madExcept              ThreadExceptFrame
-768e7ba7 +017 KERNEL32.DLL                             BaseThreadInitThunk
->> created by thread $28f4 at:
-004dd874 +018 WebSample_Web.exe System.Classes         TThread.Create
-
-thread $974 (TIdThreadWithTask): <suspended>
-004dd874 +18 WebSample_Web.exe System.Classes TThread.Create
-
-thread $2544:
-768e7ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
-
-thread $2b18:
-768e7ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
+thread $1a34:
+75e97ba7 +17 KERNEL32.DLL  BaseThreadInitThunk
 
 modules:
-003a0000 WebSample_Web.exe      1.0.0.0             D:\Programacao\_Sistemas2\D2Bridge\sampleweb\bin\Win32\Debug
-5e210000 CoreUIComponents.dll   10.0.22621.2506     C:\WINDOWS\SYSTEM32
-5e4b0000 CoreMessaging.dll      10.0.22621.2506     C:\WINDOWS\SYSTEM32
-5f490000 FaultRep.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
-65c10000 textinputframework.dll 10.0.22621.2792     C:\WINDOWS\SYSTEM32
-6e290000 propsys.dll            7.0.22621.2506      C:\WINDOWS\system32
-6e360000 CFGMGR32.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
-6e900000 TextShaping.dll        10.0.22621.2506     C:\WINDOWS\SYSTEM32
-72120000 iertutil.dll           11.0.22621.2861     C:\WINDOWS\SYSTEM32
-72360000 urlmon.dll             11.0.22621.2792     C:\WINDOWS\SYSTEM32
-72510000 AcGenral.DLL           10.0.22621.2792     C:\WINDOWS\SYSTEM32
-72970000 windowscodecs.dll      10.0.22621.2506     C:\WINDOWS\system32
-73000000 apphelp.dll            10.0.22621.2506     C:\WINDOWS\SYSTEM32
-730d0000 netutils.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
-730f0000 srvcli.dll             10.0.22621.2506     C:\WINDOWS\SYSTEM32
-73110000 MPR.dll                10.0.22621.1        C:\WINDOWS\SYSTEM32
-73130000 dwmapi.dll             10.0.22621.2506     C:\WINDOWS\SYSTEM32
-737b0000 SHFolder.dll           10.0.22621.1        C:\WINDOWS\SYSTEM32
-737c0000 MSACM32.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
-737e0000 samcli.dll             10.0.22621.1        C:\WINDOWS\SYSTEM32
-73950000 CRYPTBASE.DLL          10.0.22621.1        C:\WINDOWS\SYSTEM32
-739c0000 VERSION.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
-73be0000 Fwpuclnt.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
-73c80000 ntmarta.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
-73db0000 wintypes.dll           10.0.22621.2792     C:\WINDOWS\SYSTEM32
-73e80000 windows.storage.dll    10.0.22621.2792     C:\WINDOWS\SYSTEM32
-74570000 kernel.appcore.dll     10.0.22621.2715     C:\WINDOWS\SYSTEM32
-745b0000 UxTheme.dll            10.0.22621.2792     C:\WINDOWS\SYSTEM32
-748e0000 WINMM.dll              10.0.22621.2506     C:\WINDOWS\SYSTEM32
-74950000 WINSPOOL.DRV           10.0.22621.2506     C:\WINDOWS\SYSTEM32
-749d0000 COMCTL32.dll           6.10.22621.2506     C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_6eb991c088050a06
-74cc0000 iphlpapi.dll           10.0.22621.1        C:\WINDOWS\SYSTEM32
-74db0000 SspiCli.dll            10.0.22621.2792     C:\WINDOWS\SYSTEM32
-74e00000 mswsock.dll            10.0.22621.2506     C:\WINDOWS\system32
-74ea0000 WINSTA.dll             10.0.22621.2506     C:\WINDOWS\SYSTEM32
-74ef0000 USERENV.dll            10.0.22621.2506     C:\WINDOWS\SYSTEM32
-74f20000 wtsapi32.dll           10.0.22621.1        C:\WINDOWS\SYSTEM32
-75070000 wsock32.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
-75080000 RPCRT4.dll             10.0.22621.2792     C:\WINDOWS\System32
-75320000 combase.dll            10.0.22621.2792     C:\WINDOWS\System32
-755a0000 msvcp_win.dll          10.0.22621.2506     C:\WINDOWS\System32
-75af0000 SHLWAPI.dll            10.0.22621.2506     C:\WINDOWS\System32
-75b50000 sechost.dll            10.0.22621.2792     C:\WINDOWS\System32
-75be0000 shcore.dll             10.0.22621.2715     C:\WINDOWS\System32
-75cb0000 OLEAUT32.dll           10.0.22621.2506     C:\WINDOWS\System32
-75df0000 SHELL32.dll            10.0.22621.2792     C:\WINDOWS\System32
-76490000 advapi32.dll           10.0.22621.2792     C:\WINDOWS\System32
-76510000 Normaliz.dll           10.0.22621.1        C:\WINDOWS\System32
-76520000 bcryptPrimitives.dll   10.0.22621.2506     C:\WINDOWS\System32
-76590000 ucrtbase.dll           10.0.22621.2506     C:\WINDOWS\System32
-766b0000 MSCTF.dll              10.0.22621.2792     C:\WINDOWS\System32
-767b0000 WS2_32.dll             10.0.22621.1        C:\WINDOWS\System32
-76810000 comdlg32.dll           10.0.22621.2506     C:\WINDOWS\System32
-768d0000 KERNEL32.DLL           10.0.22621.2506     C:\WINDOWS\System32
-769c0000 win32u.dll             10.0.22621.2506     C:\WINDOWS\System32
-76b50000 GDI32.dll              10.0.22621.2792     C:\WINDOWS\System32
-76b80000 clbcatq.dll            2001.12.10941.16384 C:\WINDOWS\System32
-76c10000 USER32.dll             10.0.22621.2792     C:\WINDOWS\System32
-76dc0000 msvcrt.dll             7.0.22621.2506      C:\WINDOWS\System32
-76ea0000 IMM32.DLL              10.0.22621.2792     C:\WINDOWS\System32
-76ed0000 KERNELBASE.dll         10.0.22621.2861     C:\WINDOWS\System32
-77150000 ole32.dll              10.0.22621.2506     C:\WINDOWS\System32
-772a0000 gdi32full.dll          10.0.22621.2861     C:\WINDOWS\System32
+00ac0000 WebSample_Web.exe      1.0.0.0             D:\Programacao\_Sistemas2\D2Bridge\sampleweb\bin\Win32\Debug
+5f2c0000 FaultRep.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
+65c00000 CoreUIComponents.dll   10.0.22621.2506     C:\WINDOWS\SYSTEM32
+65ea0000 CoreMessaging.dll      10.0.22621.3007     C:\WINDOWS\SYSTEM32
+6eac0000 propsys.dll            7.0.22621.2506      C:\WINDOWS\system32
+6eb90000 TextShaping.dll        10.0.22621.2506     C:\WINDOWS\SYSTEM32
+6ec30000 windowscodecs.dll      10.0.22621.2506     C:\WINDOWS\system32
+72f00000 SHFolder.dll           10.0.22621.1        C:\WINDOWS\SYSTEM32
+734f0000 version.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
+73820000 DWMAPI.DLL             10.0.22621.2506     C:\WINDOWS\SYSTEM32
+73940000 CRYPTBASE.DLL          10.0.22621.1        C:\WINDOWS\SYSTEM32
+73a50000 Fwpuclnt.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
+73c60000 ntmarta.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
+73c90000 textinputframework.dll 10.0.22621.2792     C:\WINDOWS\SYSTEM32
+73d90000 wintypes.dll           10.0.22621.2792     C:\WINDOWS\SYSTEM32
+73e60000 windows.storage.dll    10.0.22621.2792     C:\WINDOWS\SYSTEM32
+74550000 kernel.appcore.dll     10.0.22621.2715     C:\WINDOWS\SYSTEM32
+74590000 uxtheme.dll            10.0.22621.3007     C:\WINDOWS\system32
+748c0000 CFGMGR32.dll           10.0.22621.2506     C:\WINDOWS\SYSTEM32
+74930000 winspool.drv           10.0.22621.2506     C:\WINDOWS\SYSTEM32
+749b0000 COMCTL32.dll           6.10.22621.2506     C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_6eb991c088050a06
+74ca0000 iphlpapi.dll           10.0.22621.1        C:\WINDOWS\SYSTEM32
+74d90000 SspiCli.dll            10.0.22621.3007     C:\WINDOWS\SYSTEM32
+74de0000 mswsock.dll            10.0.22621.2506     C:\WINDOWS\system32
+74e80000 WINSTA.dll             10.0.22621.2506     C:\WINDOWS\SYSTEM32
+74f00000 wtsapi32.dll           10.0.22621.1        C:\WINDOWS\SYSTEM32
+75050000 wsock32.dll            10.0.22621.1        C:\WINDOWS\SYSTEM32
+75060000 SHLWAPI.dll            10.0.22621.2506     C:\WINDOWS\System32
+750b0000 Normaliz.dll           10.0.22621.1        C:\WINDOWS\System32
+75510000 oleaut32.dll           10.0.22621.2506     C:\WINDOWS\System32
+755b0000 ole32.dll              10.0.22621.2506     C:\WINDOWS\System32
+75700000 KERNELBASE.dll         10.0.22621.2861     C:\WINDOWS\System32
+759f0000 USER32.dll             10.0.22621.2792     C:\WINDOWS\System32
+75ba0000 GDI32.dll              10.0.22621.2792     C:\WINDOWS\System32
+75c70000 gdi32full.dll          10.0.22621.2861     C:\WINDOWS\System32
+75d60000 comdlg32.dll           10.0.22621.2506     C:\WINDOWS\System32
+75e80000 KERNEL32.DLL           10.0.22621.2506     C:\WINDOWS\System32
+75f70000 shcore.dll             10.0.22621.2715     C:\WINDOWS\System32
+76040000 msvcrt.dll             7.0.22621.2506      C:\WINDOWS\System32
+76110000 sechost.dll            10.0.22621.3007     C:\WINDOWS\System32
+762b0000 combase.dll            10.0.22621.2792     C:\WINDOWS\System32
+76530000 SHELL32.dll            10.0.22621.3007     C:\WINDOWS\System32
+76bd0000 RPCRT4.dll             10.0.22621.2792     C:\WINDOWS\System32
+76c90000 win32u.dll             10.0.22621.2506     C:\WINDOWS\System32
+76cd0000 MSCTF.dll              10.0.22621.2792     C:\WINDOWS\System32
+76dd0000 clbcatq.dll            2001.12.10941.16384 C:\WINDOWS\System32
+76e60000 bcrypt.dll             10.0.22621.2506     C:\WINDOWS\System32
+76e80000 IMM32.DLL              10.0.22621.2792     C:\WINDOWS\System32
+76eb0000 advapi32.dll           10.0.22621.3007     C:\WINDOWS\System32
+76f30000 ucrtbase.dll           10.0.22621.2506     C:\WINDOWS\System32
+770d0000 bcryptPrimitives.dll   10.0.22621.2506     C:\WINDOWS\System32
+77140000 msvcp_win.dll          10.0.22621.2506     C:\WINDOWS\System32
+77390000 WS2_32.dll             10.0.22621.1        C:\WINDOWS\System32
 77400000 ntdll.dll              10.0.22621.2506     C:\WINDOWS\SYSTEM32
 
 processes:
-0000 Idle                        0 0    0
-0004 System                      0 0    0
-008c Secure System               0 0    0
-00b0 Registry                    0 0    0
-02a0 smss.exe                    0 0    0
-03b8 csrss.exe                   0 0    0
-030c wininit.exe                 0 0    0
-048c services.exe                0 0    0
-04bc LsaIso.exe                  0 0    0
-04c8 lsass.exe                   0 0    0
-0540 svchost.exe                 0 0    0
-0564 fontdrvhost.exe             0 0    0
-05c4 svchost.exe                 0 0    0
-05f8 svchost.exe                 0 0    0
-06e0 svchost.exe                 0 0    0
-0730 svchost.exe                 0 0    0
-07ac svchost.exe                 0 0    0
-07d0 svchost.exe                 0 0    0
-07d8 svchost.exe                 0 0    0
-07e0 svchost.exe                 0 0    0
-07e8 svchost.exe                 0 0    0
-0510 svchost.exe                 0 0    0
-0774 svchost.exe                 0 0    0
-081c svchost.exe                 0 0    0
-08dc svchost.exe                 0 0    0
-0964 svchost.exe                 0 0    0
-0980 svchost.exe                 0 0    0
-0990 amdfendrsr.exe              0 0    0
-0998 atiesrxx.exe                0 0    0
-09d0 svchost.exe                 0 0    0
-0aa8 svchost.exe                 0 0    0
-0ac8 svchost.exe                 0 0    0
-0b50 svchost.exe                 0 0    0
-0b58 svchost.exe                 0 0    0
-0b64 svchost.exe                 0 0    0
-0b80 svchost.exe                 0 0    0
-0898 svchost.exe                 0 0    0
-087c Memory Compression          0 0    0
-0bc4 svchost.exe                 0 0    0
-0c08 svchost.exe                 0 0    0
-0cac svchost.exe                 0 0    0
-0cc8 svchost.exe                 0 0    0
-0d38 svchost.exe                 0 0    0
-0da0 svchost.exe                 0 0    0
-0da8 svchost.exe                 0 0    0
-0e64 svchost.exe                 0 0    0
-0e80 svchost.exe                 0 0    0
-0e90 audiodg.exe                 0 0    0
-0ecc svchost.exe                 0 0    0
-0f04 spoolsv.exe                 0 0    0
-0f58 svchost.exe                 0 0    0
-0f88 svchost.exe                 0 0    0
-0f84 svchost.exe                 0 0    0
-0fb8 svchost.exe                 0 0    0
-0f74 svchost.exe                 0 0    0
-1008 svchost.exe                 0 0    0
-1010 svchost.exe                 0 0    0
-1018 svchost.exe                 0 0    0
-1020 svchost.exe                 0 0    0
-1028 svchost.exe                 0 0    0
-107c Everything.exe              0 0    0
-10c4 AnyDesk.exe                 0 0    0
-10cc runSW.exe                   0 0    0
-10d4 mysqld-nt.exe               0 0    0
-10dc AdminService.exe            0 0    0
-10e4 mysqld.exe                  0 0    0
-10f0 fbguard.exe                 0 0    0
-10fc MsMpEng.exe                 0 0    0
-1180 svchost.exe                 0 0    0
-1278 svchost.exe                 0 0    0
-12b0 svchost.exe                 0 0    0
-12f8 fbserver.exe                0 0    0
-1320 svchost.exe                 0 0    0
-134c dasHost.exe                 0 0    0
-1538 svchost.exe                 0 0    0
-17c4 svchost.exe                 0 0    0
-189c svchost.exe                 0 0    0
-19f4 svchost.exe                 0 0    0
-1a88 svchost.exe                 0 0    0
-1724 SearchIndexer.exe           0 0    0
-1be0 svchost.exe                 0 0    0
-1ca4 NisSrv.exe                  0 0    0
-2454 sppsvc.exe                  0 0    0
-1b0c GoogleCrashHandler.exe      0 0    0
-24c0 GoogleCrashHandler64.exe    0 0    0
-1c20 svchost.exe                 0 0    0
-2350 svchost.exe                 0 0    0
-2924 SecurityHealthService.exe   0 0    0
-19b4 svchost.exe                 0 0    0
-249c svchost.exe                 0 0    0
-1f18 svchost.exe                 0 0    0
-2760 svchost.exe                 0 0    0
-22e8 AUEPDU.exe                  0 0    0
-2b28 svchost.exe                 0 0    0
-0d54 svchost.exe                 0 0    0
-3600 svchost.exe                 0 0    0
-2c94 svchost.exe                 0 0    0
-3608 csrss.exe                   3 0    0
-09e8 winlogon.exe                3 0    0
-076c fontdrvhost.exe             3 0    0
-0b30 dwm.exe                     3 0    0
-0b78 atieclxx.exe                3 0    0
-2754 svchost.exe                 0 0    0
-32e4 sihost.exe                  3 0    10  normal       C:\Windows\System32
-2040 svchost.exe                 3 0    1   normal       C:\Windows\System32
-1bb0 svchost.exe                 3 0    1   normal       C:\Windows\System32
-1848 svchost.exe                 3 0    4   normal       C:\Windows\System32
-1bb4 taskhostw.exe               3 8    6   normal       C:\Windows\System32
-3138 AUEPMaster.exe              3 0    0
-06d8 explorer.exe                3 450  556 normal       C:\Windows
-25b8 rundll32.exe                3 0    4   normal       C:\Windows\System32
-2844 svchost.exe                 3 0    15  normal       C:\Windows\System32
-2ca4 SearchHost.exe              3 19   119 normal       C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy
-2008 StartMenuExperienceHost.exe 3 1    17  normal       C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy
-092c Widgets.exe                 3 1    23  normal       C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_423.30700.0.0_x64__cw5n1h2txyewy\Dashboard
-19d8 RuntimeBroker.exe           3 41   5   normal       C:\Windows\System32
-0dc4 RuntimeBroker.exe           3 42   21  normal       C:\Windows\System32
-0ca0 svchost.exe                 3 0    1   normal       C:\Windows\System32
-1508 TSVNCache.exe               3 0    5   normal       C:\Program Files\TortoiseSVN\bin
-220c dllhost.exe                 3 0    3   normal       C:\Windows\System32
-35bc ctfmon.exe                  3 0    0
-2394 svchost.exe                 3 0    3   normal       C:\Windows\System32
-2b74 PhoneExperienceHost.exe     3 0    18  normal       C:\Program Files\WindowsApps\Microsoft.YourPhone_1.23102.126.0_x64__8wekyb3d8bbwe
-06f0 WidgetService.exe           3 0    4   normal       C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_423.30700.0.0_x64__cw5n1h2txyewy\Dashboard
-1abc RuntimeBroker.exe           3 0    1   normal       C:\Windows\System32
-1894 TextInputHost.exe           3 0    65  high         C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy
-1f0c SecurityHealthSystray.exe   3 7    5   normal       C:\Windows\System32
-1790 RAVBg64.exe                 3 34   11  normal       C:\Program Files\Realtek\Audio\HDA
-2824 AnyDesk.exe                 3 110  16  normal       C:\Program Files (x86)\AnyDesk
-1e44 RadeonSoftware.exe          3 35   70  normal       C:\Program Files\AMD\CNext\CNext
-2a38 CPUMetricsServer.exe        3 0    0
-29d0 cncmd.exe                   3 0    1   normal       C:\Program Files\AMD\CNext\CNext
-2bdc RAVBg64.exe                 3 26   11  below normal C:\Program Files\Realtek\Audio\HDA
-20b4 svchost.exe                 3 0    1   normal       C:\Windows\System32
-3288 Video.UI.exe                3 0    8   normal       C:\Program Files\WindowsApps\Microsoft.ZuneVideo_10.22091.10051.0_x64__8wekyb3d8bbwe
-3620 RuntimeBroker.exe           3 1    6   normal       C:\Windows\System32
-18a4 TGitCache.exe               3 0    7   normal       C:\Program Files\TortoiseGit\bin
-0ef8 wpscloudsvr.exe             3 76   240 normal       C:\Users\Joemil\AppData\Local\Kingsoft\WPS Office\12.2.0.13412\office6
-2990 promecefpluginhost.exe      3 1    1   above normal C:\Users\Joemil\AppData\Local\Kingsoft\WPS Office\12.2.0.13412\office6
-3628 promecefpluginhost.exe      3 0    1   normal       C:\Users\Joemil\AppData\Local\Kingsoft\WPS Office\12.2.0.13412\office6
-1df0 wpscenter.exe               3 17   16  normal       C:\Users\Joemil\AppData\Local\Kingsoft\WPS Office\12.2.0.13412\office6
-1244 ShellExperienceHost.exe     3 0    27  normal       C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy
-1888 RuntimeBroker.exe           3 0    7   normal       C:\Windows\System32
-0ea4 SystemSettingsBroker.exe    3 0    0   normal       C:\Windows\System32
-3004 msedgewebview2.exe          3 20   47  normal       C:\Program Files (x86)\Microsoft\EdgeWebView\Application\120.0.2210.121
-336c msedgewebview2.exe          3 0    3   normal       C:\Program Files (x86)\Microsoft\EdgeWebView\Application\120.0.2210.121
-0778 msedgewebview2.exe          3 3    32  above normal C:\Program Files (x86)\Microsoft\EdgeWebView\Application\120.0.2210.121
-2850 msedgewebview2.exe          3 0    3   normal       C:\Program Files (x86)\Microsoft\EdgeWebView\Application\120.0.2210.121
-322c msedgewebview2.exe          3 0    0   normal       C:\Program Files (x86)\Microsoft\EdgeWebView\Application\120.0.2210.121
-2d0c msedgewebview2.exe          3 0    0   idle         C:\Program Files (x86)\Microsoft\EdgeWebView\Application\120.0.2210.121
-31ac chrome.exe                  3 60   78  normal       C:\Program Files (x86)\Google\Chrome\Application
-0a24 chrome.exe                  3 0    3   normal       C:\Program Files (x86)\Google\Chrome\Application
-161c chrome.exe                  3 10   27  above normal C:\Program Files (x86)\Google\Chrome\Application
-25ec chrome.exe                  3 0    1   normal       C:\Program Files (x86)\Google\Chrome\Application
-04ac chrome.exe                  3 0    0   normal       C:\Program Files (x86)\Google\Chrome\Application
-0784 chrome.exe                  3 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
-245c chrome.exe                  3 0    0   normal       C:\Program Files (x86)\Google\Chrome\Application
-1a98 chrome.exe                  3 0    1   normal       C:\Program Files (x86)\Google\Chrome\Application
-0c38 chrome.exe                  3 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
-2c70 chrome.exe                  3 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
-24e4 chrome.exe                  3 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
-20ec chrome.exe                  3 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
-16ac svchost.exe                 0 0    0
-1048 svchost.exe                 3 0    7   normal       C:\Windows\System32
-37c8 ApplicationFrameHost.exe    3 12   2   normal       C:\Windows\System32
-13a4 notepad++.exe               3 901  427 normal       C:\Program Files\Notepad++
-2810 adb.exe                     3 0    5   normal       C:\Users\Public\Documents\Embarcadero\Studio\22.0\PlatformSDKs\android-sdk-windows\platform-tools
-08a0 dllhost.exe                 3 0    4   normal       C:\Windows\System32
-2a64 MoUsoCoreWorker.exe         0 0    0
-1d48 WmiPrvSE.exe                0 0    0
-36e4 MoNotificationUx.exe        3 12   6   normal       C:\Windows\UUS\amd64
-2de8 bds.exe                     3 3111 669 normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
-3730 svchost.exe                 0 0    0
-0e0c git-bash.exe                3 0    1   normal       C:\Program Files\Git
-0934 mintty.exe                  3 54   17  normal       C:\Program Files\Git\usr\bin
-3744 conhost.exe                 3 14   9   normal       C:\Windows\System32
-0d00 bash.exe                    3 0    1   normal       C:\Program Files\Git\usr\bin
-37b4 chrome.exe                  3 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
-1dec smartscreen.exe             3 0    1   normal       C:\Windows\System32
-0bfc TextCrawler.exe             3 118  150 normal       C:\Program Files (x86)\TextCrawler Free
-1a80 svchost.exe                 0 0    0
-2f8c RuntimeBroker.exe           3 0    5   normal       C:\Windows\System32
-32d4 SearchProtocolHost.exe      0 0    0
-1db4 SearchFilterHost.exe        0 0    0
-1d38 DelphiLSP.exe               3 0    6   normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
-0798 conhost.exe                 3 14   9   normal       C:\Windows\System32
-23f8 DelphiLSP.exe               3 0    1   normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
-2ef8 DelphiLSP.exe               3 0    1   normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
-0a18 WebSample_Web.exe           3 82   57  normal       D:\Programacao\_Sistemas2\D2Bridge\sampleweb\bin\Win32\Debug
-2798 svchost.exe                 0 0    0
+0000 Idle                          0 0    0
+0004 System                        0 0    0
+008c Secure System                 0 0    0
+00b0 Registry                      0 0    0
+02a0 smss.exe                      0 0    0
+03e8 csrss.exe                     0 0    0
+0424 wininit.exe                   0 0    0
+042c csrss.exe                     1 0    0
+0490 winlogon.exe                  1 0    0
+04a4 services.exe                  0 0    0
+04d0 LsaIso.exe                    0 0    0
+04dc lsass.exe                     0 0    0
+0560 svchost.exe                   0 0    0
+057c fontdrvhost.exe               0 0    0
+0584 fontdrvhost.exe               1 0    0
+05e4 svchost.exe                   0 0    0
+061c svchost.exe                   0 0    0
+0650 dwm.exe                       1 0    0
+06ec svchost.exe                   0 0    0
+06f0 svchost.exe                   0 0    0
+06fc svchost.exe                   0 0    0
+0738 svchost.exe                   0 0    0
+073c svchost.exe                   0 0    0
+07b8 svchost.exe                   0 0    0
+07d4 svchost.exe                   0 0    0
+07e0 svchost.exe                   0 0    0
+07e8 svchost.exe                   0 0    0
+07f8 svchost.exe                   0 0    0
+0318 svchost.exe                   0 0    0
+078c svchost.exe                   0 0    0
+0814 svchost.exe                   0 0    0
+08d8 svchost.exe                   0 0    0
+0960 svchost.exe                   0 0    0
+097c svchost.exe                   0 0    0
+098c amdfendrsr.exe                0 0    0
+0994 atiesrxx.exe                  0 0    0
+09a4 svchost.exe                   0 0    0
+0a64 svchost.exe                   0 0    0
+0ac0 svchost.exe                   0 0    0
+0b28 svchost.exe                   0 0    0
+0b30 atieclxx.exe                  1 0    0
+0b50 svchost.exe                   0 0    0
+0b70 svchost.exe                   0 0    0
+0b74 svchost.exe                   0 0    0
+0b88 svchost.exe                   0 0    0
+0894 svchost.exe                   0 0    0
+09f4 svchost.exe                   0 0    0
+0644 Memory Compression            0 0    0
+0c28 svchost.exe                   0 0    0
+0c30 svchost.exe                   0 0    0
+0cf4 WmiPrvSE.exe                  0 0    0
+0d20 svchost.exe                   0 0    0
+0d44 svchost.exe                   0 0    0
+0e4c svchost.exe                   0 0    0
+0e54 svchost.exe                   0 0    0
+0e78 audiodg.exe                   0 0    0
+0ec8 svchost.exe                   0 0    0
+0f18 svchost.exe                   0 0    0
+0f3c svchost.exe                   0 0    0
+0f74 spoolsv.exe                   0 0    0
+0f9c svchost.exe                   0 0    0
+0bc8 svchost.exe                   0 0    0
+1058 svchost.exe                   0 0    0
+1068 svchost.exe                   0 0    0
+1078 svchost.exe                   0 0    0
+1074 svchost.exe                   0 0    0
+1080 svchost.exe                   0 0    0
+1090 Everything.exe                0 0    0
+1098 svchost.exe                   0 0    0
+10a0 svchost.exe                   0 0    0
+10f0 runSW.exe                     0 0    0
+10f8 AdminService.exe              0 0    0
+1100 AnyDesk.exe                   0 0    0
+1120 mysqld-nt.exe                 0 0    0
+1148 mysqld.exe                    0 0    0
+115c MsMpEng.exe                   0 0    0
+1164 fbguard.exe                   0 0    0
+1294 dasHost.exe                   0 0    0
+12f0 fbserver.exe                  0 0    0
+1318 svchost.exe                   0 0    0
+1358 svchost.exe                   0 0    0
+1390 svchost.exe                   0 0    0
+1468 svchost.exe                   0 0    0
+14d0 SwUSB.exe                     1 0    0
+152c svchost.exe                   0 0    0
+1618 svchost.exe                   0 0    0
+1724 svchost.exe                   0 0    0
+17e0 svchost.exe                   0 0    0
+16f8 SearchIndexer.exe             0 0    0
+0cb0 sppsvc.exe                    0 0    0
+18f4 NisSrv.exe                    0 0    0
+1af0 svchost.exe                   0 0    0
+1bbc svchost.exe                   1 0    1   normal       C:\Windows\System32
+1bc4 sihost.exe                    1 0    14  normal       C:\Windows\System32
+1bfc svchost.exe                   1 0    1   normal       C:\Windows\System32
+181c svchost.exe                   1 0    5   normal       C:\Windows\System32
+1a48 taskhostw.exe                 1 8    6   normal       C:\Windows\System32
+19d0 svchost.exe                   0 0    0
+1ab8 AUEPMaster.exe                1 0    0
+1c68 svchost.exe                   0 0    0
+1ce4 explorer.exe                  1 317  419 normal       C:\Windows
+1f54 svchost.exe                   0 0    0
+1f78 svchost.exe                   0 0    0
+1ec8 GoogleCrashHandler.exe        0 0    0
+1f1c GoogleCrashHandler64.exe      0 0    0
+1eac svchost.exe                   0 0    0
+1ef8 svchost.exe                   1 0    19  normal       C:\Windows\System32
+2010 svchost.exe                   0 0    0
+2160 SearchHost.exe                1 14   94  normal       C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy
+21d0 StartMenuExperienceHost.exe   1 0    15  normal       C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy
+2230 Widgets.exe                   1 0    1   normal       C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_423.30700.0.0_x64__cw5n1h2txyewy\Dashboard
+2264 RuntimeBroker.exe             1 36   24  normal       C:\Windows\System32
+229c RuntimeBroker.exe             1 0    6   normal       C:\Windows\System32
+22f4 svchost.exe                   1 0    1   normal       C:\Windows\System32
+23c8 TSVNCache.exe                 1 0    4   normal       C:\Program Files\TortoiseSVN\bin
+2424 dllhost.exe                   1 0    3   normal       C:\Windows\System32
+25e8 UserOOBEBroker.exe            1 0    1   normal       C:\Windows\System32\oobe
+2740 backgroundTaskHost.exe        1 0    2   normal       C:\Windows\System32
+2130 ctfmon.exe                    1 0    0
+1ba0 WmiPrvSE.exe                  0 0    0
+0674 PhoneExperienceHost.exe       1 0    20  normal       C:\Program Files\WindowsApps\Microsoft.YourPhone_1.23102.126.0_x64__8wekyb3d8bbwe
+0888 svchost.exe                   0 0    0
+1e90 WidgetService.exe             1 0    4   normal       C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_423.30700.0.0_x64__cw5n1h2txyewy\Dashboard
+0b3c smartscreen.exe               1 0    1   normal       C:\Windows\System32
+0e68 bds.exe                       1 3093 666 normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
+1ae0 RuntimeBroker.exe             1 0    2   normal       C:\Windows\System32
+0c60 TextInputHost.exe             1 0    65  high         C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy
+1d3c svchost.exe                   0 0    0
+0934 RadeonSoftware.exe            1 2    10  normal       C:\Program Files\AMD\CNext\CNext
+2910 CPUMetricsServer.exe          1 0    0
+2970 cncmd.exe                     1 0    1   normal       C:\Program Files\AMD\CNext\CNext
+2668 SecurityHealthSystray.exe     1 7    7   normal       C:\Windows\System32
+1478 SecurityHealthService.exe     0 0    0
+1a88 RAVBg64.exe                   1 34   12  normal       C:\Program Files\Realtek\Audio\HDA
+287c AnyDesk.exe                   1 110  16  normal       C:\Program Files (x86)\AnyDesk
+2bd0 RAVBg64.exe                   1 26   11  below normal C:\Program Files\Realtek\Audio\HDA
+1bac svchost.exe                   0 0    0
+2ad4 TGitCache.exe                 1 0    7   normal       C:\Program Files\TortoiseGit\bin
+0754 DelphiLSP.exe                 1 0    5   normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
+04f8 conhost.exe                   1 14   9   normal       C:\Windows\System32
+072c DelphiLSP.exe                 1 0    1   normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
+2790 DelphiLSP.exe                 1 0    1   normal       D:\Arquivos de Programas\Embarcadero\Studio\22.0\bin
+0c3c taskhostw.exe                 1 0    0
+0d04 chrome.exe                    1 22   66  normal       C:\Program Files (x86)\Google\Chrome\Application
+0d00 chrome.exe                    1 0    3   normal       C:\Program Files (x86)\Google\Chrome\Application
+10dc chrome.exe                    1 7    26  above normal C:\Program Files (x86)\Google\Chrome\Application
+10b4 chrome.exe                    1 0    1   normal       C:\Program Files (x86)\Google\Chrome\Application
+11ac chrome.exe                    1 0    0   normal       C:\Program Files (x86)\Google\Chrome\Application
+113c chrome.exe                    1 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
+1568 chrome.exe                    1 0    0   normal       C:\Program Files (x86)\Google\Chrome\Application
+1244 chrome.exe                    1 0    1   normal       C:\Program Files (x86)\Google\Chrome\Application
+0e18 AUEPDU.exe                    0 0    0
+159c svchost.exe                   0 0    0
+1974 svchost.exe                   0 0    0
+07c4 svchost.exe                   0 0    0
+2280 svchost.exe                   1 0    1   normal       C:\Windows\System32
+1e0c svchost.exe                   0 0    0
+00dc svchost.exe                   1 0    8   normal       C:\Windows\System32
+1520 svchost.exe                   0 0    0
+1dec backgroundTaskHost.exe        1 0    2   normal       C:\Windows\System32
+1198 svchost.exe                   0 0    0
+2550 RuntimeBroker.exe             1 0    12  normal       C:\Windows\System32
+08b8 WebSample_Web.exe             1 82   58  normal       D:\Programacao\_Sistemas2\D2Bridge\sampleweb\bin\Win32\Debug
+1ab0 chrome.exe                    1 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
+0548 adb.exe                       1 0    5   normal       C:\Users\Public\Documents\Embarcadero\Studio\22.0\PlatformSDKs\android-sdk-windows\platform-tools
+04c8 RuntimeBroker.exe             1 0    3   normal       C:\Windows\System32
+1e70 SearchProtocolHost.exe        0 0    0
+1bd0 SearchFilterHost.exe          0 0    0
+2338 WMIADAP.exe                   0 0    0
+055c chrome.exe                    1 0    0   idle         C:\Program Files (x86)\Google\Chrome\Application
+1c70 OneDriveStandaloneUpdater.exe 1 0    3   below normal C:\Users\Joemil\AppData\Local\Microsoft\OneDrive
+1a40 svchost.exe                   0 0    0
+1a14 Microsoft.SharePoint.exe      1 10   11  below normal C:\Users\Joemil\AppData\Local\Microsoft\OneDrive\23.246.1127.0002
 
 hardware:
 + {1ed2bbf9-11f0-4084-b21f-ad83a8e6dcdc}
@@ -624,44 +573,44 @@ hardware:
   - Firmware do Sistema
 
 cpu registers:
-eax = 02e18300
-ebx = 00000005
+eax = 03228300
+ebx = 00000578
 ecx = 00000000
-edx = 0118d968
+edx = 0144f950
 esi = 00000000
-edi = 02e1f8d0
-eip = 00400528
-esp = 001ff744
-ebp = 001ff7a8
+edi = 0322f8d0
+eip = 00b20528
+esp = 008ff900
+ebp = 008ff964
 
 stack dump:
-001ff744  28 05 40 00 de fa ed 0e - 01 00 00 00 07 00 00 00  (.@.............
-001ff754  58 f7 1f 00 28 05 40 00 - 00 83 e1 02 05 00 00 00  X...(.@.........
-001ff764  00 00 00 00 d0 f8 e1 02 - a8 f7 1f 00 74 f7 1f 00  ............t...
-001ff774  b4 f7 1f 00 24 a9 3a 00 - a8 f7 1f 00 70 22 d5 02  ....$.:.....p"..
-001ff784  70 22 d5 02 00 00 00 00 - 05 00 00 00 00 a0 3a 00  p"............:.
-001ff794  dc 04 e2 02 11 0d e1 02 - 00 00 00 00 11 ff ff ff  ................
-001ff7a4  00 83 e1 02 c4 f7 1f 00 - 28 05 40 00 52 4f 57 00  ........(.@.ROW.
-001ff7b4  d4 f7 1f 00 24 a9 3a 00 - c4 f7 1f 00 70 22 d5 02  ....$.:.....p"..
-001ff7c4  00 f8 1f 00 0c 99 63 00 - f0 1a dc 02 16 5a 63 00  ......c......Zc.
-001ff7d4  4c f8 1f 00 24 a9 3a 00 - 00 f8 1f 00 f0 1a dc 02  L...$.:.........
-001ff7e4  f8 bc e0 02 03 00 00 00 - d4 01 63 00 f0 1a dc 02  ..........c.....
-001ff7f4  70 22 d5 02 02 f3 4d 01 - 70 22 d5 02 03 00 00 00  p"....M.p"......
-001ff804  ef 94 3a 00 93 f3 4d 00 - 24 1b dc 02 70 22 d5 02  ..:...M.$...p"..
-001ff814  70 22 d5 02 70 22 d5 02 - 5c f8 1f 00 00 00 9d 00  p"..p"..\.......
-001ff824  a0 db 9f 00 28 39 63 00 - 62 39 63 00 03 4e 3f 00  ....(9c.b9c..N?.
-001ff834  e0 4d 3f 00 f0 b0 3a 00 - e4 f9 9c 00 e4 f9 9c 00  .M?...:.........
-001ff844  00 f0 fc 00 37 fa 9c 00 - b4 f8 1f 00 f4 ab 3a 00  ....7.........:.
-001ff854  5c f8 1f 00 00 00 00 00 - 6c f8 1f 00 a9 7b 8e 76  \.......l....{.v
-001ff864  00 f0 fc 00 90 7b 8e 76 - c4 f8 1f 00 2b bd 46 77  .....{.v....+.Fw
-001ff874  00 f0 fc 00 3b be 5d c5 - 00 00 00 00 00 00 00 00  ....;.].........
+008ff900  28 05 b2 00 de fa ed 0e - 01 00 00 00 07 00 00 00  (...............
+008ff910  14 f9 8f 00 28 05 b2 00 - 00 83 22 03 78 05 00 00  ....(.....".x...
+008ff920  00 00 00 00 d0 f8 22 03 - 64 f9 8f 00 30 f9 8f 00  ......".d...0...
+008ff930  70 f9 8f 00 24 a9 ac 00 - 64 f9 8f 00 70 22 16 03  p...$...d...p"..
+008ff940  70 22 16 03 00 00 00 00 - 78 05 00 00 00 a0 ac 00  p"......x.......
+008ff950  4c 1d 78 07 11 0d 22 03 - 00 00 00 00 11 ff ff ff  L.x...".........
+008ff960  00 83 22 03 80 f9 8f 00 - 28 05 b2 00 52 4f c9 00  ..".....(...RO..
+008ff970  90 f9 8f 00 24 a9 ac 00 - 80 f9 8f 00 70 22 16 03  ....$.......p"..
+008ff980  bc f9 8f 00 0c 99 d5 00 - f0 1a 1d 03 16 5a d5 00  .............Z..
+008ff990  08 fa 8f 00 24 a9 ac 00 - bc f9 8f 00 f0 1a 1d 03  ....$...........
+008ff9a0  f8 bc 21 03 03 00 00 00 - d4 01 d5 00 f0 1a 1d 03  ..!.............
+008ff9b0  70 22 16 03 02 f3 bf 01 - 70 22 16 03 03 00 00 00  p"......p"......
+008ff9c0  ef 94 ac 00 93 f3 bf 00 - 24 1b 1d 03 70 22 16 03  ........$...p"..
+008ff9d0  70 22 16 03 70 22 16 03 - 18 fa 8f 00 00 00 0f 01  p"..p"..........
+008ff9e0  a0 db 11 01 28 39 d5 00 - 62 39 d5 00 03 4e b1 00  ....(9..b9...N..
+008ff9f0  e0 4d b1 00 f0 b0 ac 00 - e4 f9 0e 01 e4 f9 0e 01  .M..............
+008ffa00  00 d0 7c 00 37 fa 0e 01 - 70 fa 8f 00 f4 ab ac 00  ..|.7...p.......
+008ffa10  18 fa 8f 00 00 00 00 00 - 28 fa 8f 00 a9 7b e9 75  ........(....{.u
+008ffa20  00 d0 7c 00 90 7b e9 75 - 80 fa 8f 00 2b bd 46 77  ..|..{.u....+.Fw
+008ffa30  00 d0 7c 00 95 eb e5 a7 - 00 00 00 00 00 00 00 00  ..|.............
 
 disassembling:
-003a94e4    public System.TObject.Free:      ; function entry point
-003a94e4 60   test    eax, eax
-003a94e6      jz      loc_3a94ef
-003a94e8      mov     dl, 1
-003a94ea      mov     ecx, [eax]
-003a94ec    > call    dword ptr [ecx-4]
-003a94ef      ret
+00ac94e4    public System.TObject.Free:      ; function entry point
+00ac94e4 60   test    eax, eax
+00ac94e6      jz      loc_ac94ef
+00ac94e8      mov     dl, 1
+00ac94ea      mov     ecx, [eax]
+00ac94ec    > call    dword ptr [ecx-4]
+00ac94ef      ret
 
