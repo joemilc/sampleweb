@@ -54,4 +54,4 @@ Volte ao Delphi e confira o código gerado<br>
 
 <br>
 Se este código te ajudou, que tal uma contribuiçãozinha?<br>
-![QRCode para contribuição](https://github.com/joemilc/sampleweb/blob/main/qrcode-pix-component.png)
+<img src="https://github.com/joemilc/sampleweb/blob/main/qrcode-pix-component.png">
