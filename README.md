@@ -20,10 +20,9 @@ begin
   end;
 end;
 ```
-No form que tem os componentes a serem exportamos temos a procedure *ExportD2Bridge*, que deve ter a seguinte estrutura:
-(veja as linhas com comentarios)
-*{Variaveis D2Bridge}* - aqui serão adicionadas as variáveis necessários
-*{Yours Controls}* - aqui serão adicionados os comandos de exportação dos componentes
+No form que tem os componentes a serem exportamos temos a procedure *ExportD2Bridge*, que deve ter as seguintes marcações:<br>
+*{Variaveis D2Bridge}* - aqui serão adicionadas as variáveis necessários<br>
+*{Yours Controls}* - aqui serão adicionados os comandos de exportação dos componentes<br>
 
 ```pascal
 procedure TfSampleForm.ExportD2Bridge;
