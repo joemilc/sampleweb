@@ -12,6 +12,7 @@ object ViewExportForm2Web: TViewExportForm2Web
   Font.Style = []
   Position = poScreenCenter
   OnDestroy = FormDestroy
+  PixelsPerInch = 96
   DesignSize = (
     1077
     827)
@@ -94,7 +95,6 @@ object ViewExportForm2Web: TViewExportForm2Web
     ParentFont = False
     ScrollBars = ssBoth
     TabOrder = 1
-    ExplicitWidth = 733
   end
   object Button1: TButton
     Left = 936

@@ -11,6 +11,7 @@ object fSampleForm: TfSampleForm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
     Left = 8
@@ -126,7 +127,7 @@ object fSampleForm: TfSampleForm
     Top = 154
     Width = 721
     Height = 319
-    ActivePage = TabSheet1
+    ActivePage = TabSheet3
     TabOrder = 8
     object TabSheet1: TTabSheet
       Caption = 'Endere'#231'o'
@@ -401,6 +402,25 @@ object fSampleForm: TfSampleForm
         Lines.Strings = (
           'Memo1')
         TabOrder = 7
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'TabSheet3'
+      ImageIndex = 2
+      object PageControl2: TPageControl
+        Left = 24
+        Top = 32
+        Width = 529
+        Height = 249
+        ActivePage = TabSheet5
+        TabOrder = 0
+        object TabSheet4: TTabSheet
+          Caption = 'TabSheet4'
+        end
+        object TabSheet5: TTabSheet
+          Caption = 'TabSheet5'
+          ImageIndex = 1
+        end
       end
     end
   end

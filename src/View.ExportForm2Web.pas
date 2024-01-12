@@ -40,7 +40,7 @@ type
     procedure AddPageControl(APageControl: TPageControl; AParent: String);
     procedure AddPanel(APanel: TPanel);
     procedure AddGroupBox(AGroupBox: TGroupBox);
-    procedure AddVariavel(ATipoVariavel: TTipoVariavel);
+    procedure AddVariavel(ATipoVariavel: TTipoVariavel; AVarName: String);
     procedure LimpaMemo;
 
     function GetparentVar(AControl: TWinControl): String;
@@ -64,14 +64,14 @@ uses System.SysUtils, System.StrUtils;
 procedure TViewExportForm2Web.AddGroupBox(AGroupBox: TGroupBox);
 var
   sl: TStrings;
-  s: String;
+  s, sName: String;
 begin
-  AddVariavel(tvRow);
-  AddVariavel(tvPanelGroup);
+  AddVariavel(tvPanelGroup, memWinControlsName.AsString);
 
   sl := TStringList.Create;
   try
-    sl.Add(Format(Identa + '  d2bPanelGroup := d2bTabSheet.PanelGroup(''%s'', false).Items.add;', [AGroupBox.Name]));
+    sName := 'd2b'+AGroupBox.Name;
+    sl.Add(Format(Identa + '  ' + sName + ' := d2b'+AGroupBox.Parent.Name+'.PanelGroup(''%s'', false).Items.add;', [AGroupBox.Name]));
     //sl.Add(Format(Identa + '    d2bRow := d2bPanelGroup.Row.Items.add;', []));
     sl.Add(Format('{%s/%s}', [memWinControlsParent.AsString, AGroupBox.Name]));
 
@@ -88,40 +88,56 @@ begin
   end;
 end;
 
-procedure TViewExportForm2Web.AddPageControl(APageControl: TPageControl;
-  AParent: String);
+procedure TViewExportForm2Web.AddPageControl(APageControl: TPageControl; AParent: String);
 var
   I: Integer;
+  PageCName, TabName: String;
+  sl: TStrings;
+  sParent, sVars: String;
 begin
   if Pos(APageControl.Name, Memo1.Lines.Text) > 0 then
     Exit;
 
-  AddVariavel(tvRow);
-  AddVariavel(tvPageControl);
-  AddVariavel(tvTabSheet);
+  PageCName := 'd2b' + APageControl.Name;
+  slVariaveis.Add('  ' + PageCName + ': ID2BridgeItemHTMLTabs; {var_pagecontrol}');
 
-  Memo1.Lines.Add('');
-  Memo1.Lines.Add(Identa + '  d2bPageControl := Tabs;');
+  sl := TStringList.Create;
+  sl.Add('');
+  sl.Add(Identa + '  '+PageCName + ' := Tabs;');
 
+  sVars := '';
   for I := 0 to APageControl.PageCount - 1 do
   begin
-    Memo1.Lines.Add(Identa + '    d2bTabSheet := d2bPageControl.AddTab('+QuotedStr(APageControl.Pages[I].Caption)+').Items.add;');
-    //Memo1.Lines.Add(Identa + '      d2bRow := d2bTabSheet.Row.Items.add;');
-    Memo1.Lines.Add(Format('{%s/%s/%s}', [memWinControlsParent.AsString, APageControl.Name, APageControl.Pages[I].Name]));
-    Memo1.Lines.Add('');
+    TabName := 'd2b' + APageControl.Pages[I].Name;
+    sVars := sVars + TabName + ' ';
+    sl.Add(Format(Identa + '    %s := %s.AddTab(%s).Items.add;', [TabName, PageCName, QuotedStr(APageControl.Pages[I].Caption)]));
+    sl.Add(Format('{%s/%s/%s}', [memWinControlsParent.AsString, APageControl.Name, APageControl.Pages[I].Name]));
   end;
+
+  if APageControl.Parent is TCustomForm then
+    Memo1.Lines.Add(sl.Text)
+  else
+  begin
+    sParent := Format('{%s}', [memWinControlsParent.AsString]);
+    sl.Add(sParent);
+    Memo1.Lines.Text := StringReplace(Memo1.Lines.Text, sParent, sl.Text, []);
+  end;
+
+  sVars := '  '+StringReplace(Trim(sVars), ' ', ',', [rfReplaceAll])+ ': IItemAdd; {var_tabsheet}';
+  slVariaveis.Add(sVars);
+  sl.Free;
 end;
 
 procedure TViewExportForm2Web.AddPanel(APanel: TPanel);
 var
   sl: TStrings;
-  s: String;
+  sName, s: String;
 begin
-  AddVariavel(tvRow);
-  AddVariavel(tvPanel);
+  AddVariavel(tvPanel, APanel.Name);
   sl := TStringList.Create;
   try
-    sl.Add(Identa + '  d2bPanel := HTMLDIV(''expanel expanel-body'').Items.add;');
+    sName := 'd2b'+APanel.Name;
+    sl.Add(Identa + '  '+Sname+' := HTMLDIV(''expanel expanel-body'').Items.add;');
     //sl.Add(Identa + '    d2bRow := d2bPanel.Row.Items.add;');
     sl.Add(Format('{%s/%s}', [memWinControlsParent.AsString, APanel.Name]));
     if APanel.Parent is TCustomForm then
@@ -137,19 +153,46 @@ begin
   end;
 end;
 
-procedure TViewExportForm2Web.AddVariavel(ATipoVariavel: TTipoVariavel);
-var s: String;
+procedure TViewExportForm2Web.AddVariavel(ATipoVariavel: TTipoVariavel; AVarName: String);
 begin
+  AVarName := 'd2b'+AVarName;
   case ATipoVariavel of
-    tvRow:        s := '  d2bRow: IItemAdd;';
-    tvPageControl:s := '  d2bPageControl: ID2BridgeItemHTMLTabs;';
-    tvTabSheet:   s := '  d2bTabsheet: IItemAdd;';
-    tvPanel:      s := '  d2bPanel: IItemAdd;';
-    tvPanelGroup: s := '  d2bPanelGroup: IItemAdd;';
+    tvRow:
+      begin
+        if Pos(': IItemAdd; {var_row}', slVariaveis.Text) = 0 then
+          slVariaveis.Add('  '+AVarName+': IItemAdd; {var_row}')
+        else
+          slVariaveis.Text := StringReplace(slVariaveis.Text, ': IItemAdd; {var_row}', Format(', %s: IItemAdd; {var_row}', [AVarName]), []);
+      end;
+    tvPageControl:
+      begin
+        if Pos(': ID2BridgeItemHTMLTabs; {var_pagecontrol}', slVariaveis.Text) = 0 then
+          slVariaveis.Add('  '+AVarName+': ID2BridgeItemHTMLTabs; {var_pagecontrol}')
+        else
+          slVariaveis.Text := StringReplace(slVariaveis.Text, ': ID2BridgeItemHTMLTabs; {var_pagecontrol}', Format(', %s: ID2BridgeItemHTMLTabs; {var_pagecontrol}', [AVarName]), []);
+      end;
+    tvTabSheet:
+      begin
+        if Pos(': IItemAdd; {var_tabsheet}', slVariaveis.Text) = 0 then
+          slVariaveis.Add('  '+AVarName+': IItemAdd; {var_tabsheet}')
+        else
+          slVariaveis.Text := StringReplace(slVariaveis.Text, ': IItemAdd; {var_tabsheet}', Format(', %s: IItemAdd; {var_tabsheet}', [AVarName]), []);
+      end;
+    tvPanel:
+      begin
+        if Pos(': IItemAdd; {var_panel}', slVariaveis.Text) = 0 then
+          slVariaveis.Add('  '+AVarName+': IItemAdd; {var_panel}')
+        else
+          slVariaveis.Text := StringReplace(slVariaveis.Text, ': IItemAdd; {var_panel}', Format(', %s: IItemAdd; {var_panel}', [AVarName]), []);
+      end;
+    tvPanelGroup:
+      begin
+        if Pos(': IItemAdd; {var_panelgroup}', slVariaveis.Text) = 0 then
+          slVariaveis.Add('  '+AVarName+': IItemAdd; {var_panelgroup}')
+        else
+          slVariaveis.Text := StringReplace(slVariaveis.Text, ': IItemAdd; {var_panelgroup}', Format(', %s: IItemAdd; {var_panelgroup}', [AVarName]), []);
+      end;
   end;
-
-  if slVariaveis.IndexOf(s) = -1 then
-    slVariaveis.Add(s);
 end;
 
 procedure TViewExportForm2Web.Button1Click(Sender: TObject);
@@ -178,17 +221,19 @@ begin
   slVariaveis.Free;
 end;
 
-function TViewExportForm2Web.GetparentVar(AControl: TWinControl): String;
+function TViewExportForm2Web.GetParentVar(AControl: TWinControl): String;
 begin
   Result := '';
-  if AControl.Parent is TPageControl then
+  if not (AControl.Parent is TCustomForm) then
+    Result := Format('d2b%s.', [AControl.Parent.Name]);
+  {if AControl.Parent is TPageControl then
     Result := 'd2bPageControl.'
   else if AControl.Parent is TTabSheet then
-    Result := 'd2bTabSheet.'
+    Result := 'd2b'+AControl.name+'.'
   else if AControl.Parent is TPanel then
     Result := 'd2bPanel.'
   else if AControl.Parent is TGroupBox then
-    Result := 'd2bPanelGroup.';
+    Result := 'd2bPanelGroup.';}
 end;
 
 function TViewExportForm2Web.Identa: String;
@@ -240,7 +285,7 @@ begin
     ViewExportForm2Web.slVariaveis.Free;
   ViewExportForm2Web.slVariaveis := TStringList.Create;
   ViewExportForm2Web.slVariaveis.Add('{Variaveis D2Bridge}');
-  ViewExportForm2Web.AddVAriavel(tvRow);
+  ViewExportForm2Web.AddVAriavel(tvRow, 'Row');
 
   ViewExportForm2Web.ComboBox1.Items.Add('Todos');
 
@@ -354,7 +399,7 @@ begin
 
       if WinControl is TPageControl then
       begin
-        AddPageControl(TPageControl(WinControl), memWinControlsparent.AsString);
+        AddPageControl(TPageControl(WinControl), memWinControlsParent.AsString);
         xTop := TOP_INICIAL;
         memWinControls.Next;
       end
