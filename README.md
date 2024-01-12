@@ -9,7 +9,7 @@ Para usar, basta você adicionar a unit **View.ExportForm2Web** ao seu projeto, 
 Pra fazer a chamada da procedure, eu usei as teclas **Ctrl+E**, configuradas no evento *OnShortcut* do *Application.Events*.
 Assim, ela irá pegar o form que está ativo no momento
 
-```
+```Pascal
 procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey;
   var Handled: Boolean);
 begin
