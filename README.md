@@ -1,4 +1,4 @@
-# sampleweb
+# ExportVCLToD2Bridge
 Gerador de código para exportar um form Delphi VCL para D2Bridge
 
 Olá pessoal, fiz este código pra facilitar a exportação de um form VCL para o D2Bridge
@@ -6,7 +6,7 @@ Olá pessoal, fiz este código pra facilitar a exportação de um form VCL para 
 Ele ira exportar todos controles q são descendentes de TWinControl, só é necessario verificar se o D2Bridge tem suporte para componentes de terceiros<br><br>
 
 Para usar, basta você adicionar a unit **View.ExportForm2Web** ao seu projeto, adicioná-la no uses do form principal, e chamar a procedure **ExportForm2Web**.<br> 
-Pra fazer a chamada da procedure, eu usei as teclas **Ctrl+E**, configuradas no evento *OnShortcut* do *Application.Events*.
+Pra fazer a chamada da procedure, eu usei as teclas **Alt+E**, configuradas no evento *OnShortcut* do *Application.Events*.
 Assim, ela irá pegar o form que está ativo no momento
 
 ```pascal
@@ -46,3 +46,12 @@ begin
 
 end;
 ```
+E estamos prontos pra realizar a exportação.<br>
+Execute sua aplicação em VCL, vá até o form desejado e tecle Alt+E<br>
+Clique no button *Alterar na Unit*, selecione a unit desejada e clique abrir.<br>
+Volte ao Delphi e confira o código gerado<br>
+<br>
+
+<br>
+Se este código te ajudou, que tal uma contribuiçãozinha?
+![QRCode para contribuição](URL da imagem)
