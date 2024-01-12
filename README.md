@@ -57,6 +57,6 @@ Se este código te ajudou, que tal uma contribuiçãozinha?<br>
 <img src="https://github.com/joemilc/sampleweb/blob/main/pix-websample.jpg"><br>
 Chave PIX: joemil.cassio@gmail.com<br>
 Nome: Joemil Cássio<br>
-Valor: R$ 100,00<br>
+Valor: R$ 100,00 (ou qualquer outro valor)<br>
 Código da transferência: ExportVLC2D2Bridge<br>
 Código QrCode (Copia e Cola): 00020126450014BR.GOV.BCB.PIX0123joemil.cassio@gmail.com5204000053039865406100.005802BR5913Joemil Cassio6008Sinop-MT62220518ExportVLC2D2Bridge6304B0EF
