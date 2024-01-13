@@ -3,22 +3,28 @@ Gerador de código para exportar um form Delphi VCL para D2Bridge
 
 Olá pessoal, fiz este código pra facilitar a exportação de um form VCL para o D2Bridge
 
-Ele ira exportar todos controles q são descendentes de TWinControl, só é necessario verificar se o D2Bridge tem suporte para componentes de terceiros<br><br>
+Ele ira exportar todos controles que são descendentes de TWinControl, só é necessario verificar se o D2Bridge tem suporte para componentes de terceiros<br><br>
 
-Para usar, basta você adicionar a unit **View.ExportForm2Web** ao seu projeto, adicioná-la no uses do form principal, e chamar a procedure **ExportForm2Web**.<br> 
+Para usar, basta você adicionar as units **uExportaControls.pas** e **View.ExportForm2Web.pas** que estão na pasta exportador ao seu projeto, adicioná-la no uses do form principal.<br> 
 Pra fazer a chamada da procedure, eu usei as teclas **Alt+E**, configuradas no evento *OnShortcut* do *Application.Events*.
 Assim, ela irá pegar o form que está ativo no momento
 
 ```pascal
-procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey;
-  var Handled: Boolean);
+procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey; var Handled: Boolean);
 begin
-  if (Msg.CharCode = Ord('E')) and (HiWord(Msg.KeyData) and KF_ALTDOWN <> 0) then
-  begin
-    ExportForm2Web;
+  if (Msg.CharCode = Ord('E')) and (HiWord(Msg.KeyData) and KF_ALTDOWN <> 0)
+  then begin
+    TExportaControls.New
+      .SetForm(Screen.ActiveForm)
+      .Initialize
+      .ListaComponentes
+      .ListaLabels
+      .GeraCodigo;
+
     Handled := TRUE;
   end;
 end;
+
 ```
 No form que tem os componentes a serem exportamos temos a procedure *ExportD2Bridge*, que deve ter as seguintes marcações:<br>
 *{Variaveis D2Bridge}* - aqui serão adicionadas as variáveis necessários<br>
