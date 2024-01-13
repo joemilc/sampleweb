@@ -1,11 +1,6 @@
 program WebSample_VCL;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
   Vcl.Forms,
   D2Bridge.Instance,
   uLogin in 'uLogin.pas' {ViewLogin},

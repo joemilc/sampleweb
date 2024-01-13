@@ -1,11 +1,6 @@
 program WebSample_Web;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
   Vcl.Forms,
   MidasLib,
   Unit_Server_D2Bridge in 'Unit_Server_D2Bridge.pas' {Form_Servidor_D2Bridge},
