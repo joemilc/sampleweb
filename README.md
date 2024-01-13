@@ -5,8 +5,8 @@ Olá pessoal, fiz este código pra facilitar a exportação de um form VCL para 
 
 Ele irá exportar todos controles que são descendentes de TWinControl, só é necessario verificar se o D2Bridge tem suporte para componentes de terceiros<br><br>
 
-Para usar, basta você adicionar as units **uExportaControls.pas** e **View.ExportForm2Web.pas** que estão na pasta exportador ao seu projeto, adicioná-la no uses do form principal.<br> 
-Pra fazer a chamada da procedure, eu usei as teclas **Alt+E**, configuradas no evento *OnShortcut* do *Application.Events*.
+Para usar, basta adicionar as units **uExportaControls.pas** e **View.ExportForm2Web.pas** que estão na pasta exportador ao seu projeto, e adicioná-la no uses do form principal.<br> 
+Pra fazer a chamada da procedure, eu usei as teclas **Alt+E**, configuradas no evento *OnShortCut* do *Application.Events*.
 Assim, ela irá pegar o form que está ativo no momento
 
 ```pascal
