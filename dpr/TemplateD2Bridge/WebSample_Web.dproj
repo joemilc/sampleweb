@@ -140,11 +140,13 @@
             <Form>Form_Dashboard</Form>
         </DCCReference>
         <DCCReference Include="..\..\src\D2BridgeFormTemplate.pas"/>
-        <DCCReference Include="..\..\src\View.ExportForm2Web.pas">
-            <Form>ViewExportForm2Web</Form>
-        </DCCReference>
         <DCCReference Include="..\..\src\uSampleForm.pas">
             <Form>fSampleForm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\exportador\uExportaControls.pas"/>
+        <DCCReference Include="..\..\exportador\View.ExportForm2Web.pas">
+            <Form>ViewExportForm2Web</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -178,6 +180,12 @@
             </Platforms>
             <Deployment Version="4">
                 <DeployFile LocalName="..\..\bin\Win32\Debug\WebSample_Web.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="..\..\bin\Win32\Debug\WebSample_Web.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>WebSample_Web.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>

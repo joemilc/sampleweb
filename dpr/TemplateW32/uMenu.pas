@@ -42,8 +42,7 @@ begin
  Result:= TViewMenu(D2BridgeInstance.GetInstance(TViewMenu));
 end;
 
-procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey;
-  var Handled: Boolean);
+procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey; var Handled: Boolean);
 begin
   if (Msg.CharCode = Ord('E')) and (HiWord(Msg.KeyData) and KF_ALTDOWN <> 0)
   then begin

@@ -16,8 +16,9 @@ uses
   uMenu in '..\TemplateW32\uMenu.pas' {ViewMenu},
   Unit_Dashboard in 'Unit_Dashboard.pas' {Form_Dashboard},
   D2BridgeFormTemplate in '..\..\src\D2BridgeFormTemplate.pas',
-  View.ExportForm2Web in '..\..\src\View.ExportForm2Web.pas' {ViewExportForm2Web},
-  uSampleForm in '..\..\src\uSampleForm.pas' {fSampleForm};
+  uSampleForm in '..\..\src\uSampleForm.pas' {fSampleForm},
+  uExportaControls in '..\..\exportador\uExportaControls.pas',
+  View.ExportForm2Web in '..\..\exportador\View.ExportForm2Web.pas' {ViewExportForm2Web};
 
 {$R *.res}
 
@@ -25,5 +26,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm_Servidor_D2Bridge, Form_Servidor_D2Bridge);
+  Application.CreateForm(TViewExportForm2Web, ViewExportForm2Web);
   Application.Run;
 end.
