@@ -1,4 +1,4 @@
-# ExportVCLToD2Bridge
+# Exportar componentes VCL para D2Bridge
 Gerador de código para exportar um form Delphi VCL para D2Bridge
 
 Olá pessoal, fiz este código pra facilitar a exportação de um form VCL para o D2Bridge
