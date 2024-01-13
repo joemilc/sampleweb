@@ -142,6 +142,8 @@ end;
 O projeto usado é o demo Template que vem junto com o D2Bridge. Fiz uma cópia do mesmo, só abrir o projeto e testar.<br>
 Adicione ou remova componentes do form SampleForm e faça mais testes<br>
 Eu adicionei as pastas do D2Bridge no Library Path do Delphi.<br><br>
+Para mais informações sobre o D2Bridge, acesse o discord:<br>
+https://discord.com/channels/1168534461663690805/1168534462418649095<br><br>
 Se este código te ajudou, que tal uma contribuiçãozinha 😎?<br><br>
 <img src="https://github.com/joemilc/sampleweb/blob/main/pix-websample.jpg"><br>
 Chave PIX: joemil.cassio@gmail.com<br>
