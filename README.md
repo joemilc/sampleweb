@@ -140,6 +140,7 @@ begin
 
 end;
 ```
+O projeto usado é o demo Template que vem junto com o D2Bridge. Fiz uma cópia do mesmo, só abrir o projeto. Eu adicionei as pastas do D2Bridge no Library Path do Delphi.<br><br>
 Se este código te ajudou, que tal uma contribuiçãozinha 😎?<br><br>
 <img src="https://github.com/joemilc/sampleweb/blob/main/pix-websample.jpg"><br>
 Chave PIX: joemil.cassio@gmail.com<br>
