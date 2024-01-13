@@ -26,7 +26,7 @@ begin
 end;
 
 ```
-No form que tem os componentes a serem exportamos temos a procedure *ExportD2Bridge*, que deve ter as seguintes marcações:<br>
+Abra o form desejado (aqui usei o *SampleForm*), nele temos a procedure *ExportD2Bridge*, que deve ter as seguintes marcações:<br>
 *{Variaveis D2Bridge}* - aqui serão adicionadas as variáveis necessárias<br>
 *{Yours Controls}* - aqui serão adicionados os comandos de exportação dos componentes<br>
 
@@ -54,8 +54,10 @@ end;
 ```
 E estamos prontos pra realizar a exportação.<br>
 Execute sua aplicação em VCL, vá até o form desejado e tecle Alt+E<br>
-Clique no button *Alterar na Unit*, selecione a unit desejada e clique abrir.<br>
+Aqui será mostrado o preview do código de exportação<br>
+Clique no button *Alterar na Unit*, selecione a unit desejada e clique abrir<br>
 Volte ao Delphi e confira o código gerado<br>
+Agora só executar o projeto web e testar<br>
 <br>
 ```pascal
 procedure TfSampleForm.ExportD2Bridge;
