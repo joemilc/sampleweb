@@ -54,7 +54,7 @@ end;
 ```
 E estamos prontos pra realizar a exportação.<br>
 Execute sua aplicação em VCL, vá até o form desejado e tecle Alt+E<br>
-Aqui será mostrado o preview do código de exportação<br>
+Neste momento, será mostrado um preview do código de exportação<br>
 Clique no button *Alterar na Unit*, selecione a unit desejada e clique abrir<br>
 Volte ao Delphi e confira o código gerado<br>
 Agora só executar o projeto web e testar<br>
