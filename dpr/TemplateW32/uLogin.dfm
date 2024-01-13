@@ -2,7 +2,7 @@ object ViewLogin: TViewLogin
   Left = 0
   Top = 0
   Caption = 'D2Bridge - Login'
-  ClientHeight = 166
+  ClientHeight = 261
   ClientWidth = 277
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

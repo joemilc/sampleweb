@@ -11,16 +11,14 @@ object ViewExportForm2Web: TViewExportForm2Web
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  OnDestroy = FormDestroy
-  PixelsPerInch = 96
   DesignSize = (
     1077
     827)
   TextHeight = 15
   object DBGrid1: TDBGrid
-    Left = 327
+    Left = 8
     Top = 37
-    Width = 727
+    Width = 1046
     Height = 201
     Anchors = [akLeft, akTop, akRight]
     DataSource = dsmemWinControls
@@ -81,7 +79,7 @@ object ViewExportForm2Web: TViewExportForm2Web
         Visible = True
       end>
   end
-  object Memo1: TMemo
+  object MemoCode: TMemo
     Left = 327
     Top = 247
     Width = 727
@@ -95,6 +93,8 @@ object ViewExportForm2Web: TViewExportForm2Web
     ParentFont = False
     ScrollBars = ssBoth
     TabOrder = 1
+    ExplicitWidth = 721
+    ExplicitHeight = 531
   end
   object Button1: TButton
     Left = 936
@@ -105,24 +105,35 @@ object ViewExportForm2Web: TViewExportForm2Web
     Caption = 'Alterar na Unit'
     TabOrder = 2
     OnClick = Button1Click
+    ExplicitTop = 784
   end
   object TreeView1: TTreeView
     Left = 8
-    Top = 2
+    Top = 247
     Width = 313
-    Height = 785
+    Height = 540
     Anchors = [akLeft, akBottom]
     Indent = 19
     TabOrder = 3
   end
   object ComboBox1: TComboBox
-    Left = 327
+    Left = 8
     Top = 8
     Width = 194
     Height = 23
     Style = csDropDownList
     TabOrder = 4
     OnChange = ComboBox1Change
+  end
+  object MemoVars: TMemo
+    Left = 128
+    Top = 136
+    Width = 401
+    Height = 281
+    Lines.Strings = (
+      'MemoVars')
+    TabOrder = 5
+    Visible = False
   end
   object OpenDialog1: TOpenDialog
     Filter = 'Units|*.pas'

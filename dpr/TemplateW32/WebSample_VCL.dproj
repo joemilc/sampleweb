@@ -172,12 +172,10 @@
         </DCCReference>
         <DCCReference Include="..\TemplateD2Bridge\ServerController.pas"/>
         <DCCReference Include="..\TemplateD2Bridge\UserSessionUnit.pas"/>
-        <DCCReference Include="..\..\src\View.ExportForm2Web.pas">
-            <Form>ViewExportForm2Web</Form>
-        </DCCReference>
         <DCCReference Include="..\..\src\uSampleForm.pas">
             <Form>fSampleForm</Form>
         </DCCReference>
+        <DCCReference Include="..\..\exportador\uExportaControls.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -214,7 +212,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="WebSample_VCL.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\bin\Win32\Debug\WebSample_VCL.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>WebSample_VCL.exe</RemoteName>
                         <Overwrite>true</Overwrite>

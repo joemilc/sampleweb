@@ -11,7 +11,6 @@ object fSampleForm: TfSampleForm
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
     Left = 8

@@ -15,7 +15,6 @@ object Form_Servidor_D2Bridge: TForm_Servidor_D2Bridge
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
     Left = 8
@@ -184,6 +183,7 @@ object Form_Servidor_D2Bridge: TForm_Servidor_D2Bridge
     Color = 15640322
     ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 477
     object Image_Logo_D2Bridge: TImage
       AlignWithMargins = True
       Left = 5

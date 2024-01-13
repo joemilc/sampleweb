@@ -4,8 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus,
-  Vcl.AppEvnts, View.ExportForm2Web;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.AppEvnts;
 
 type
   TViewMenu = class(TForm)
@@ -33,7 +32,8 @@ implementation
 Uses
  Unit_Cadastro_Cliente,
  D2Bridge.Instance,
- uSampleForm;
+ uSampleForm,
+ uExportaControls;
 
 {$R *.dfm}
 
@@ -47,7 +47,13 @@ procedure TViewMenu.ApplicationEvents1ShortCut(var Msg: TWMKey;
 begin
   if (Msg.CharCode = Ord('E')) and (HiWord(Msg.KeyData) and KF_ALTDOWN <> 0)
   then begin
-    ExportForm2Web;
+    TExportaControls.New
+      .SetForm(Screen.ActiveForm)
+      .Initialize
+      .ListaComponentes
+      .ListaLabels
+      .GeraCodigo;
+
     Handled := TRUE;
   end;
 end;

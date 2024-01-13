@@ -15,8 +15,8 @@ uses
   Unit_Dashboard in '..\TemplateD2Bridge\Unit_Dashboard.pas' {Form_Dashboard},
   ServerController in '..\TemplateD2Bridge\ServerController.pas',
   UserSessionUnit in '..\TemplateD2Bridge\UserSessionUnit.pas',
-  View.ExportForm2Web in '..\..\src\View.ExportForm2Web.pas' {ViewExportForm2Web},
-  uSampleForm in '..\..\src\uSampleForm.pas' {fSampleForm};
+  uSampleForm in '..\..\src\uSampleForm.pas' {fSampleForm},
+  uExportaControls in '..\..\exportador\uExportaControls.pas';
 
 {$R *.res}
 

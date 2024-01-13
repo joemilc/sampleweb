@@ -152,9 +152,9 @@ end;
 
 procedure TForm_Servidor_D2Bridge.Status_Buttons;
 begin
- Button_Start.Enabled:= not D2BridgeServerController.Started;
- Button_Stop.Enabled:= D2BridgeServerController.Started;
- Edit_Port.Enabled:= not D2BridgeServerController.Started;
+ Button_Start.Enabled := not D2BridgeServerController.Started;
+ Button_Stop.Enabled  := D2BridgeServerController.Started;
+ Edit_Port.Enabled    := not D2BridgeServerController.Started;
 end;
 
 end.

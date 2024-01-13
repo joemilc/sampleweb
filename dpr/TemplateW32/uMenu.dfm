@@ -2,8 +2,8 @@ object ViewMenu: TViewMenu
   Left = 0
   Top = 0
   Caption = 'D2Bridge - Menu'
-  ClientHeight = 433
-  ClientWidth = 622
+  ClientHeight = 424
+  ClientWidth = 616
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

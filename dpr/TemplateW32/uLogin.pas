@@ -17,6 +17,7 @@ type
     Panel2: TPanel;
     procedure BUTTON_LOGARClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure BUTTON_CRIARClick(Sender: TObject);
   private
 
   protected
@@ -41,6 +42,11 @@ Uses
 Function ViewLogin: TViewLogin;
 begin
   result := TViewLogin(TViewLogin.GetInstance);
+end;
+
+procedure TViewLogin.BUTTON_CRIARClick(Sender: TObject);
+begin
+  ShowMessage('Criar Conta');
 end;
 
 procedure TViewLogin.BUTTON_LOGARClick(Sender: TObject);
