@@ -136,13 +136,12 @@ begin
           d2bRow.FormGroup('', CSSClass.Col.colauto).AddVCLObj(Button1);
           d2bRow.FormGroup('', CSSClass.Col.colauto).AddVCLObj(Button2);
           d2bRow.FormGroup('', CSSClass.Col.colauto).AddVCLObj(Button3);
-
-
   end;
-
 end;
 ```
-O projeto usado é o demo Template que vem junto com o D2Bridge. Fiz uma cópia do mesmo, só abrir o projeto. Eu adicionei as pastas do D2Bridge no Library Path do Delphi.<br><br>
+O projeto usado é o demo Template que vem junto com o D2Bridge. Fiz uma cópia do mesmo, só abrir o projeto e testar.<br>
+Adicione ou remova componentes do form SampleForm e faça mais testes<br>
+Eu adicionei as pastas do D2Bridge no Library Path do Delphi.<br><br>
 Se este código te ajudou, que tal uma contribuiçãozinha 😎?<br><br>
 <img src="https://github.com/joemilc/sampleweb/blob/main/pix-websample.jpg"><br>
 Chave PIX: joemil.cassio@gmail.com<br>
