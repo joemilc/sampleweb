@@ -20,10 +20,12 @@ object ViewMenu: TViewMenu
       Caption = 'Cadastro'
       object ContasaReceber1: TMenuItem
         Caption = 'SampleForm'
+        Hint = 'bi bi-bar-chart-line'
         OnClick = ContasaReceber1Click
       end
       object Cliente1: TMenuItem
         Caption = 'Cliente'
+        Hint = 'bi bi-people'
         OnClick = Cliente1Click
       end
       object Cidade1: TMenuItem

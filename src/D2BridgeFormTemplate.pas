@@ -87,6 +87,7 @@ var
   I, J: Integer;
   vCallBackName: string;
   vMenuItem: TMenuItem;
+  icon: String;
 begin
   Result := '';
 
@@ -127,12 +128,16 @@ begin
 
     for J := 0 to ViewMenu.MainMenu1.Items[I].Count - 1 do
     begin
+      vMenuItem := ViewMenu.MainMenu1.Items[I].Items[J];
       Result := Result + '  <li>' + sLineBreak;
       Result := Result + '    <a href="#" onclick="' +
         Session.CallBacks.CallBackJS(vCallBackName, Session.ActiveForm.FormUUID,
-        QuotedStr(ViewMenu.MainMenu1.Items[I].Items[J].Name)) + '">' +
+        QuotedStr(vMenuItem.Name)) + '">' +
         sLineBreak;
-      Result := Result + '      <i class="bi bi-circle"></i><span>' +
+      icon := 'bi bi-circle';
+      if vMenuItem.Hint <> '' then
+        icon := vMenuItem.Hint + ' '+D2Bridge.CSSClass.Text.Size.fs5;
+      Result := Result + '      <i class="' + Icon + '"></i><span>' +
         StringReplace(ViewMenu.MainMenu1.Items[I].Items[J].Caption, '&', '',
         [rfReplaceAll]) + '</span>' + sLineBreak;
       Result := Result + '    </a>' + sLineBreak;
