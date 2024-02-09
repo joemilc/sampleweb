@@ -1,6 +1,9 @@
 # Exportar componentes VCL para D2Bridge
-Gerador de código para exportar um form Delphi VCL para D2Bridge
-
+Gerador de código para exportar um form Delphi VCL para D2Bridge<br>
+<br>
+Vídeo Explicativo:<br>
+https://www.youtube.com/watch?v=jkmD7aWrf6k&ab_channel=JoemilCassio<br>
+<br>
 Olá pessoal, fiz este código pra facilitar a exportação de um form VCL para o D2Bridge
 
 Ele irá exportar todos controles que são descendentes de TWinControl, só é necessario verificar se o D2Bridge tem suporte para componentes de terceiros<br><br>
