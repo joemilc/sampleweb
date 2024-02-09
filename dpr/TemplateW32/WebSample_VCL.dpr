@@ -12,13 +12,14 @@ uses
   UserSessionUnit in '..\TemplateD2Bridge\UserSessionUnit.pas',
   uSampleForm in '..\..\src\uSampleForm.pas' {fSampleForm},
   uExportaControls in '..\..\exportador\uExportaControls.pas',
-  View.ExportForm2Web in '..\..\exportador\View.ExportForm2Web.pas' {ViewExportForm2Web};
+  View.ExportForm2Web in '..\..\exportador\View.ExportForm2Web.pas' {ViewExportForm2Web},
+  uSampleForm2 in '..\..\src\uSampleForm2.pas' {fSampleForm2};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  ReportMemoryLeaksOnShutdown := True;
+  //ReportMemoryLeaksOnShutdown := True;
   Application.MainFormOnTaskbar := True;
   TViewLogin.CreateInstance;
   ViewLogin.ShowModal;

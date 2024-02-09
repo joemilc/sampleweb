@@ -115,7 +115,6 @@ begin
     Row.Items.add.VCLObj(lblTitulo, CSSClass.Text.Size.fs3 + ' ' + CSSClass.Text.Style.bold);
     {Yours Controls}
   end;
-
 end;
 
 procedure TfSampleForm.InitControlsD2Bridge(const PrismControl: TPrismControl);

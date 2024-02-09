@@ -13,7 +13,8 @@ uses
   D2BridgeFormTemplate in '..\..\src\D2BridgeFormTemplate.pas',
   uSampleForm in '..\..\src\uSampleForm.pas' {fSampleForm},
   uExportaControls in '..\..\exportador\uExportaControls.pas',
-  View.ExportForm2Web in '..\..\exportador\View.ExportForm2Web.pas' {ViewExportForm2Web};
+  View.ExportForm2Web in '..\..\exportador\View.ExportForm2Web.pas' {ViewExportForm2Web},
+  uSampleForm2 in '..\..\src\uSampleForm2.pas' {fSampleForm2};
 
 {$R *.res}
 

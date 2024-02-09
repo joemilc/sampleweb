@@ -93,8 +93,6 @@ object ViewExportForm2Web: TViewExportForm2Web
     ParentFont = False
     ScrollBars = ssBoth
     TabOrder = 1
-    ExplicitWidth = 721
-    ExplicitHeight = 531
   end
   object Button1: TButton
     Left = 936

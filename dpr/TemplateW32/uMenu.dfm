@@ -30,10 +30,17 @@ object ViewMenu: TViewMenu
         Caption = 'Cidade'
       end
     end
+    object Outros1: TMenuItem
+      Caption = 'Outros'
+      object Outros2: TMenuItem
+        Caption = 'SampleForm2'
+        OnClick = Outros2Click
+      end
+    end
   end
   object ApplicationEvents1: TApplicationEvents
     OnShortCut = ApplicationEvents1ShortCut
-    Left = 152
-    Top = 208
+    Left = 56
+    Top = 168
   end
 end

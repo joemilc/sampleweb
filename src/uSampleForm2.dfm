@@ -1,9 +1,9 @@
-object fSampleForm: TfSampleForm
+object fSampleForm2: TfSampleForm2
   Left = 0
   Top = 0
-  Caption = 'SampleForm'
-  ClientHeight = 551
-  ClientWidth = 738
+  Caption = 'fSampleForm2'
+  ClientHeight = 552
+  ClientWidth = 761
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -126,8 +126,8 @@ object fSampleForm: TfSampleForm
     Top = 154
     Width = 721
     Height = 319
-    ActivePage = TabSheet1
-    TabOrder = 8
+    ActivePage = TabSheet2
+    TabOrder = 7
     object TabSheet1: TTabSheet
       Caption = 'Endere'#231'o'
       object Label5: TLabel
@@ -330,13 +330,6 @@ object fSampleForm: TfSampleForm
         Height = 15
         Caption = 'Label4'
       end
-      object Label13: TLabel
-        Left = 24
-        Top = 136
-        Width = 40
-        Height = 15
-        Caption = 'Label13'
-      end
       object Edit7: TEdit
         Left = 24
         Top = 45
@@ -393,15 +386,6 @@ object fSampleForm: TfSampleForm
         Caption = 'CheckBox3'
         TabOrder = 6
       end
-      object Memo1: TMemo
-        Left = 24
-        Top = 157
-        Width = 655
-        Height = 89
-        Lines.Strings = (
-          'Memo1')
-        TabOrder = 7
-      end
     end
     object TabSheet3: TTabSheet
       Caption = 'TabSheet3'
@@ -409,16 +393,153 @@ object fSampleForm: TfSampleForm
       object PageControl2: TPageControl
         Left = 24
         Top = 32
-        Width = 529
-        Height = 249
+        Width = 657
+        Height = 209
         ActivePage = TabSheet5
         TabOrder = 0
         object TabSheet4: TTabSheet
           Caption = 'TabSheet4'
+          object GroupBox2: TGroupBox
+            Left = 3
+            Top = 21
+            Width = 635
+            Height = 150
+            Caption = 'GroupBox1'
+            TabOrder = 0
+            object Label19: TLabel
+              Left = 13
+              Top = 80
+              Width = 34
+              Height = 15
+              Caption = 'Label4'
+            end
+            object Label20: TLabel
+              Left = 388
+              Top = 24
+              Width = 34
+              Height = 15
+              Caption = 'Label3'
+            end
+            object Label21: TLabel
+              Left = 124
+              Top = 24
+              Width = 34
+              Height = 15
+              Caption = 'Label2'
+            end
+            object Label22: TLabel
+              Left = 13
+              Top = 24
+              Width = 34
+              Height = 15
+              Caption = 'Label1'
+            end
+            object Edit14: TEdit
+              Left = 13
+              Top = 45
+              Width = 105
+              Height = 23
+              TabOrder = 0
+              Text = 'Edit1'
+            end
+            object CheckBox6: TCheckBox
+              Left = 538
+              Top = 104
+              Width = 97
+              Height = 17
+              Caption = 'CheckBox3'
+              TabOrder = 6
+            end
+            object CheckBox13: TCheckBox
+              Left = 421
+              Top = 104
+              Width = 97
+              Height = 17
+              Caption = 'CheckBox2'
+              TabOrder = 5
+            end
+            object Edit15: TEdit
+              Left = 13
+              Top = 101
+              Width = 401
+              Height = 23
+              TabOrder = 4
+              Text = 'Edit3'
+            end
+            object CheckBox14: TCheckBox
+              Left = 539
+              Top = 48
+              Width = 97
+              Height = 17
+              Caption = 'CheckBox1'
+              TabOrder = 3
+            end
+            object ComboBox5: TComboBox
+              Left = 388
+              Top = 45
+              Width = 145
+              Height = 23
+              TabOrder = 2
+              Text = 'ComboBox1'
+            end
+            object Edit16: TEdit
+              Left = 124
+              Top = 45
+              Width = 257
+              Height = 23
+              TabOrder = 1
+              Text = 'Edit2'
+            end
+          end
         end
         object TabSheet5: TTabSheet
           Caption = 'TabSheet5'
           ImageIndex = 1
+          object Label23: TLabel
+            Left = 24
+            Top = 24
+            Width = 34
+            Height = 15
+            Caption = 'Label4'
+          end
+          object Label24: TLabel
+            Left = 135
+            Top = 24
+            Width = 34
+            Height = 15
+            Caption = 'Label6'
+          end
+          object Label25: TLabel
+            Left = 24
+            Top = 80
+            Width = 34
+            Height = 15
+            Caption = 'Label4'
+          end
+          object Edit17: TEdit
+            Left = 24
+            Top = 45
+            Width = 105
+            Height = 23
+            TabOrder = 0
+            Text = 'Edit1'
+          end
+          object Edit18: TEdit
+            Left = 135
+            Top = 45
+            Width = 290
+            Height = 23
+            TabOrder = 1
+            Text = 'Edit2'
+          end
+          object Edit19: TEdit
+            Left = 24
+            Top = 101
+            Width = 401
+            Height = 23
+            TabOrder = 2
+            Text = 'Edit3'
+          end
         end
       end
     end
@@ -429,7 +550,7 @@ object fSampleForm: TfSampleForm
     Width = 721
     Height = 57
     Caption = 'Panel1'
-    TabOrder = 9
+    TabOrder = 8
     object Button1: TButton
       Left = 8
       Top = 16
@@ -454,13 +575,68 @@ object fSampleForm: TfSampleForm
       Caption = 'Button3'
       TabOrder = 2
     end
+    object Button4: TButton
+      Left = 295
+      Top = 16
+      Width = 75
+      Height = 25
+      Caption = 'Relat'#243'rio'
+      TabOrder = 3
+      OnClick = Button4Click
+    end
   end
   object Edit13: TEdit
     Left = 566
     Top = 125
     Width = 105
     Height = 23
-    TabOrder = 7
+    TabOrder = 9
     Text = 'Edit1'
+  end
+  object frxReport1: TfrxReport
+    Version = '6.9.14'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Padr'#227'o'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45329.851764884300000000
+    ReportOptions.LastChange = 45329.860499560200000000
+    ScriptLanguage = 'PascalScript'
+    ShowProgress = False
+    StoreInDFM = False
+    Left = 208
+    Top = 16
+  end
+  object frxPDFExport1: TfrxPDFExport
+    ShowDialog = False
+    UseFileCache = True
+    ShowProgress = False
+    OverwritePrompt = False
+    DataOnly = False
+    EmbedFontsIfProtected = False
+    InteractiveFormsFontSubset = 'A-Z,a-z,0-9,#43-#47 '
+    OpenAfterExport = False
+    PrintOptimized = False
+    Outline = False
+    Background = False
+    HTMLTags = True
+    Quality = 95
+    Transparency = False
+    Author = 'FastReport'
+    Subject = 'FastReport PDF export'
+    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
+    HideToolbar = False
+    HideMenubar = False
+    HideWindowUI = False
+    FitWindow = False
+    CenterWindow = False
+    PrintScaling = False
+    PdfA = False
+    PDFStandard = psNone
+    PDFVersion = pv17
+    Left = 288
+    Top = 16
   end
 end

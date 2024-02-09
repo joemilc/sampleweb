@@ -148,6 +148,10 @@
             <Form>ViewExportForm2Web</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\..\src\uSampleForm2.pas">
+            <Form>fSampleForm2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

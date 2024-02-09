@@ -58,12 +58,12 @@ begin
   OnTagHTML := ProcessTagHTML;
 
   // Declarando CallBack Modo 1
-  Session.CallBacks.Register('AbreDashboard', AbreDashboard);
-  Session.CallBacks.Register('AbreMenu', AbreMenu);
-  Session.CallBacks.Register('Logout', Logout);
+  CallBacks.Register('AbreDashboard', AbreDashboard);
+  CallBacks.Register('AbreMenu', AbreMenu);
+  CallBacks.Register('Logout', Logout);
 
   // Declarando CallBack Modo 2 - (Modo 1 Menu Estático)
-  Session.CallBacks.Register('AbreMenuCliente',
+  CallBacks.Register('AbreMenuCliente',
     function(EventParams: TStrings): string
     begin
       if Form_Cadastro_Cliente = nil then
@@ -91,7 +91,7 @@ begin
   Result := '';
 
   vCallBackName := 'CallBackEventAutoMenu';
-  Session.CallBacks.Register(vCallBackName,
+  CallBacks.Register(vCallBackName,
     function(EventParams: TStrings): String
     // var x,y: Integer;
     begin

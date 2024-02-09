@@ -14,10 +14,12 @@ type
     Cidade1: TMenuItem;
     ContasaReceber1: TMenuItem;
     ApplicationEvents1: TApplicationEvents;
+    Outros1: TMenuItem;
+    Outros2: TMenuItem;
     procedure Cliente1Click(Sender: TObject);
     procedure ApplicationEvents1ShortCut(var Msg: TWMKey; var Handled: Boolean);
     procedure ContasaReceber1Click(Sender: TObject);
-    procedure ContasaReceber2Click(Sender: TObject);
+    procedure Outros2Click(Sender: TObject);
   private
 
   public
@@ -33,7 +35,8 @@ Uses
  Unit_Cadastro_Cliente,
  D2Bridge.Instance,
  uSampleForm,
- uExportaControls;
+ uExportaControls,
+ uSampleForm2;
 
 {$R *.dfm}
 
@@ -71,9 +74,14 @@ begin
   fSampleForm.ShowModal;
 end;
 
-procedure TViewMenu.ContasaReceber2Click(Sender: TObject);
+procedure TViewMenu.Outros2Click(Sender: TObject);
 begin
-
+  {fSampleForm2 := TfSampleForm2.Create(Self);
+  fSampleForm2.ShowModal;
+  FreeAndNil(fSampleForm2);}
+  if fSampleForm2 = nil then
+    TfSampleForm2.CreateInstance;
+  fSampleForm2.ShowModal;
 end;
 
 //destructor TForm_Menu.Destroy;

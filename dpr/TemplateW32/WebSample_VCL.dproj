@@ -177,6 +177,9 @@
         <DCCReference Include="..\..\exportador\uExportaControls.pas"/>
         <DCCReference Include="..\..\exportador\View.ExportForm2Web.pas">
             <Form>ViewExportForm2Web</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\src\uSampleForm2.pas">
+            <Form>fSampleForm2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
